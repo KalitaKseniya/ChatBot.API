@@ -2,8 +2,6 @@
 using ChatBot.Core.Interfaces;
 using ChatBot.Core.Models;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Diagnostics;
 
 namespace ChatBot.API.Controllers
 {
@@ -12,9 +10,13 @@ namespace ChatBot.API.Controllers
     public class ChatController : Controller
     {
         private readonly IRepositoryManager _repository;
-        public ChatController(IRepositoryManager repositoryManager)
+        private readonly ILoggerManager _logger;
+
+        public ChatController(IRepositoryManager repositoryManager,
+                              ILoggerManager logger)
         {
             _repository = repositoryManager;
+            _logger = logger;
         }
         [HttpGet]
         public IActionResult GetChats()
@@ -30,6 +32,7 @@ namespace ChatBot.API.Controllers
             var chat = _repository.Chat.GetChat(id, false);
             if(chat == null)
             {
+                _logger.LogWarn($"There is no chat with id = {id}");
                 return NotFound();
             }
 
@@ -41,6 +44,7 @@ namespace ChatBot.API.Controllers
         {
             if(chatDto == null)
             {
+                _logger.LogWarn("Can't create chatDto == null");
                 return BadRequest();
             }
             var chat = new Chat() { 
@@ -61,6 +65,7 @@ namespace ChatBot.API.Controllers
             var chatFromDb = _repository.Chat.GetChat(id, false);
             if(chatFromDb == null || chatDto == null)
             {
+                _logger.LogWarn($"Can't update chatDto == null or no chat with id={id}");
                 return BadRequest();
             }
             
@@ -73,7 +78,7 @@ namespace ChatBot.API.Controllers
             _repository.Chat.UpdateChat(chat);
             _repository.Save();
 
-            return Ok();
+            return Ok(chat);
         }
         
         [HttpDelete("{id}")]
@@ -82,6 +87,7 @@ namespace ChatBot.API.Controllers
             var chatFromDb = _repository.Chat.GetChat(id, false);
             if (chatFromDb == null)
             {
+                _logger.LogWarn($"There is no chat with id={id}");
                 return BadRequest();
             }
           

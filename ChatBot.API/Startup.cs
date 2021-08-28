@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NLog;
+using System.IO;
 
 namespace ChatBot.API
 {
@@ -13,6 +15,7 @@ namespace ChatBot.API
     {
         public Startup(IConfiguration configuration)
         {
+            LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/nlog.config")); 
             Configuration = configuration;
         }
 
@@ -25,6 +28,7 @@ namespace ChatBot.API
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.ConfigureRepositoryManager();
+            services.ConfigureLoggerService();
             services.AddControllers();
         }
 
