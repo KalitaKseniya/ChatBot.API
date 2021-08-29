@@ -1,4 +1,5 @@
-﻿using ChatBot.Core.Models;
+﻿using ChatBot.Core.Configuration;
+using ChatBot.Core.Models;
 using ChatBot.Infrastructure.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -31,6 +32,7 @@ namespace ChatBot.Infrastructure
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfiguration(new RoleConfiguration());
             modelBuilder.HasAnnotation("Relational:Collation", "Cyrillic_General_CI_AS");
 
             modelBuilder.Entity<Chat>(entity =>
