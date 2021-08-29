@@ -1,10 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ChatBot.Core.Models;
+using ChatBot.Infrastructure.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 #nullable disable
 
-namespace ChatBot.Core.Models
+namespace ChatBot.Infrastructure
 {
-    public partial class RepositoryContext : DbContext
+    public partial class RepositoryContext : IdentityDbContext<User>
     {
         public RepositoryContext()
         {
@@ -27,6 +30,7 @@ namespace ChatBot.Core.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.HasAnnotation("Relational:Collation", "Cyrillic_General_CI_AS");
 
             modelBuilder.Entity<Chat>(entity =>

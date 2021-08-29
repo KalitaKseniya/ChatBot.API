@@ -1,7 +1,10 @@
 using ChatBot.API.Extensions;
 using ChatBot.Core.Models;
+using ChatBot.Infrastructure;
+using ChatBot.Infrastructure.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,6 +30,8 @@ namespace ChatBot.API
             services.AddDbContext<RepositoryContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+            services.ConfigureIdentity();
+            //services.ConfigureJWT(Configuration);
             services.ConfigureRepositoryManager();
             services.ConfigureLoggerService();
             services.AddControllers();
@@ -43,7 +48,7 @@ namespace ChatBot.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
