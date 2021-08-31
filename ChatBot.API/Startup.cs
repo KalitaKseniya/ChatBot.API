@@ -31,7 +31,8 @@ namespace ChatBot.API
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.ConfigureIdentity();
-            //services.ConfigureJWT(Configuration);
+            services.ConfigureJWT(Configuration);
+            services.ConfigureAuthManager();
             services.ConfigureRepositoryManager();
             services.ConfigureLoggerService();
             services.AddControllers();

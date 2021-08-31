@@ -14,13 +14,16 @@ namespace ChatBot.API.Controllers
         private readonly UserManager<User> _userManager;
         private readonly RoleManager<User> _roleManager;
         private readonly ILoggerManager _logger;
+        private readonly IAuthenticationManager _authManager;
         public AuthenticationController(UserManager<User> userManager,
                                         RoleManager<User> roleManager, 
-                                        ILoggerManager logger)
+                                        ILoggerManager logger,
+                                        IAuthenticationManager authenticationManager)
         {
             _logger = logger;
             _userManager = userManager;
             _roleManager = roleManager;
+            _authManager = authenticationManager;
         }
 
         [HttpPost]
@@ -48,6 +51,18 @@ namespace ChatBot.API.Controllers
             }
             await _userManager.AddToRolesAsync(user, userDto.Roles);
             return StatusCode(201);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AuthenticateUser(UserForAuthenticationDto userDto)
+        {
+            if (!await _authManager.ValidateUser(userDto))
+            {
+                _logger.LogWarn($"Authentication of user failed. {userDto.UserName} {userDto.Password}");
+                return Unauthorized();
+            }
+            var token = await _authManager.CreateToken() ;
+            return Ok(new { token = token });
         }
     }
 }

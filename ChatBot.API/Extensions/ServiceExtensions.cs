@@ -37,31 +37,33 @@ namespace ChatBot.API.Extensions
                 .AddRoles<IdentityRole>();
         }
 
-        //public static void ConfigureJWT(this IServiceCollection services, IConfiguration configuraton)
-        //{
-        //    var jwtSettings = configuraton.GetSection("JwtSettings");
-        //    var secretKey = Environment.GetEnvironmentVariable("SECRET");
+        public static void ConfigureJWT(this IServiceCollection services, IConfiguration configuraton)
+        {
+            var jwtSettings = configuraton.GetSection("JwtSettings");
+            var secretKey = Environment.GetEnvironmentVariable("SECRET");
 
-        //    services.AddAuthentication(opt =>
-        //    {
-        //        opt.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-        //        opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-        //    })
-        //    .AddJwtBearer(opt =>
-        //    {
-        //        opt.TokenValidationParameters = new TokenValidationParameters
-        //        {
-        //            ValidateAudience = true,
-        //            ValidateIssuer = true,
-        //            ValidateLifetime = true,
-        //            ValidateIssuerSigningKey = true,
+            services.AddAuthentication(opt =>
+            {
+                opt.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(opt =>
+            {
+                opt.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateAudience = true,
+                    ValidateIssuer = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
 
-        //            ValidAudience = jwtSettings.GetSection("validAudience").Value,
-        //            ValidIssuer = jwtSettings.GetSection("validIssuer").Value,
-        //            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey + secretKey))
-        //        };
-        //    });
+                    ValidAudience = jwtSettings.GetSection("validAudience").Value,
+                    ValidIssuer = jwtSettings.GetSection("validIssuer").Value,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey + secretKey))
+                };
+            });
 
-        //}
+        }
+        public static void ConfigureAuthManager(this IServiceCollection services) =>
+            services.AddScoped<IAuthenticationManager, AuthenticationManager>();
     }
 }
