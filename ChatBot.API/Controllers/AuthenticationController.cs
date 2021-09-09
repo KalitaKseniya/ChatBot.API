@@ -49,11 +49,19 @@ namespace ChatBot.API.Controllers
                 }
                 return BadRequest(ModelState);
             }
-            await _userManager.AddToRolesAsync(user, userDto.Roles);
+            if (userDto.Roles.Count != 0)
+            {
+                await _userManager.AddToRolesAsync(user, userDto.Roles);
+            }
             return StatusCode(201);
         }
 
+        /// <summary>
+        /// Login the system
+        /// </summary>
+        /// <returns>The token</returns>
         [HttpPost]
+        [Route("login")]
         public async Task<IActionResult> AuthenticateUser(UserForAuthenticationDto userDto)
         {
             if (!await _authManager.ValidateUser(userDto))

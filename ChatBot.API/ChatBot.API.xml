@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChatBot.API</name>
+    </assembly>
+    <members>
+        <member name="M:ChatBot.API.Controllers.AuthenticationController.AuthenticateUser(ChatBot.Core.Dtos.UserForAuthenticationDto)">
+            <summary>
+            Login the system
+            </summary>
+            <returns>The token</returns>
+        </member>
+    </members>
+</doc>

@@ -36,17 +36,23 @@ namespace ChatBot.API
             services.ConfigureRepositoryManager();
             services.ConfigureLoggerService();
             services.AddControllers();
+            services.ConfigureSwagger();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My ChatBot API v1");
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseHttpsRedirection();
+                        app.UseHttpsRedirection();
 
             app.UseRouting();
             app.UseAuthentication();
