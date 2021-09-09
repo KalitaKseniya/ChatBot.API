@@ -36,7 +36,10 @@ namespace ChatBot.API
             services.ConfigureAuthManager();
             services.ConfigureRepositoryManager();
             services.ConfigureLoggerService();
-            services.AddControllers();
+            services.AddControllers()
+                    .AddNewtonsoftJson(options =>
+                                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
             services.ConfigureSwagger();
         }
 

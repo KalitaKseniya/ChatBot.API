@@ -22,7 +22,6 @@ namespace ChatBot.API.Controllers
         public IActionResult GetChats()
         {
             var chats = _repository.Chat.GetAllChats(false);
-
             return Ok(chats);
         }
 

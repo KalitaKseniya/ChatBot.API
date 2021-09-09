@@ -2449,3 +2449,1381 @@
 2021-09-09 18:40:23.8370 Debug FileTarget(Name=logfile): Preparing for new file 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt'
 2021-09-09 18:40:23.8370 Debug Creating file appender: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt
 2021-09-09 18:40:23.8486 Trace Opening C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt with allowFileSharedWriting=False
+2021-09-09 23:03:10.0480 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:03:10.2625 Debug Found assembly location directory: 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-09-09 23:03:10.2625 Debug Auto loading based on NLog-Assembly found location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:03:10.2625 Debug Search for auto loading files in location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:03:10.2712 Debug Start auto loading, location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:03:10.2712 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:03:10.2712 Info Loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:03:10.4027 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.4.1610. Product version: 1.7.4+e2bffa9e949fb4760d75aca224e78631c063f087. GlobalAssemblyCache: False
+2021-09-09 23:03:10.4027 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:03:10.4027 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll succeeded!
+2021-09-09 23:03:10.4027 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:03:10.4027 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:03:10.4027 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-09-09 23:03:10.4027 Debug Auto loading done
+2021-09-09 23:03:10.4107 Info Message Template Auto Format enabled
+2021-09-09 23:03:10.4107 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:03:10.4270 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:03:10.4270 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:03:10.4270 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:03:10.4270 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:03:10.4270 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:03:10.4270 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:03:10.4270 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:03:10.4270 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:03:10.4270 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:03:10.4414 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:03:10.4414 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:03:10.4414 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:03:10.4414 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-09-09 23:03:10.4414 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:03:10.4414 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:03:10.4414 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-09-09 23:03:10.4414 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:03:10.4414 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:03:10.4414 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:03:10.4414 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:03:10.4414 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:03:10.4414 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:03:10.4414 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:03:10.4414 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:03:10.4414 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:03:10.4414 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:03:10.4414 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:03:10.4414 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:03:10.4414 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:03:10.4414 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:03:10.4414 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:03:10.4414 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:03:10.4414 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:03:10.4414 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:03:10.4414 Info Adding target FileTarget(Name=logfile)
+2021-09-09 23:03:10.4576 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-09-09 23:03:10.4576 Trace ParseRulesElement
+2021-09-09 23:03:10.4739 Debug Watching path 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API' filter 'nlog.config' for changes.
+2021-09-09 23:03:10.4739 Debug --- NLog configuration dump ---
+2021-09-09 23:03:10.4739 Debug Targets:
+2021-09-09 23:03:10.4739 Debug File Target[logfile]
+2021-09-09 23:03:10.4739 Debug Rules:
+2021-09-09 23:03:10.4739 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-09-09 23:03:10.4739 Debug --- End of NLog configuration dump ---
+2021-09-09 23:03:10.4739 Trace FindReachableObject<System.Object>:
+2021-09-09 23:03:10.4739 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-09-09 23:03:10.4739 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-09-09 23:03:10.4739 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:03:10.4739 Trace   Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:03:10.4739 Trace   Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:03:10.4739 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:03:10.4739 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:03:10.4739 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:03:10.4739 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:03:10.4739 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:03:10.4739 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:03:10.4739 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:03:10.4739 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:03:10.4739 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:03:10.4739 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:03:10.4739 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:03:10.4882 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:03:10.4882 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:03:10.4882 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:03:10.4882 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:03:10.4882 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:03:10.4882 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:03:10.4882 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-09-09 23:03:10.4882 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-09-09 23:03:10.4882 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/nlog.config
+2021-09-09 23:03:10.4882 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-09-09 23:03:10.4882 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-09-09 23:03:10.5051 Trace Initializing Layout Renderer: ${message}
+2021-09-09 23:03:10.5051 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:03:10.5051 Trace Initializing Layout Renderer: ${level}
+2021-09-09 23:03:10.5051 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-09-09 23:03:10.5051 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:03:10.5051 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:03:10.5051 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:03:10.5051 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:03:10.5051 Trace Initializing Layout Renderer: ${uppercase}
+2021-09-09 23:03:10.5051 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:03:10.5051 Trace Initializing Layout Renderer: ${longdate}
+2021-09-09 23:03:10.5051 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:03:10.5051 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:03:10.5229 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:03:10.5229 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:03:10.5229 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:03:10.5229 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:03:10.5229 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:03:10.5229 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:03:10.5229 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:03:10.5229 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:03:10.5229 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:03:10.5229 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:03:10.5358 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:03:10.5358 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:03:10.5358 Trace Initializing Layout Renderer: ${shortdate}
+2021-09-09 23:03:10.5358 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:03:10.5358 Trace Initializing 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:03:10.5358 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:03:10.5358 Trace Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:03:10.5358 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:03:10.5358 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:03:10.5358 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:03:10.5358 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:03:10.5358 Trace Initializing File Target[logfile]
+2021-09-09 23:03:10.5358 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-09-09 23:03:10.5358 Trace Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:03:10.5358 Trace  Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:03:10.5358 Trace  Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:03:10.5358 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:03:10.5525 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:03:10.5525 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:03:10.5525 Trace File Target[logfile] has 2 layouts
+2021-09-09 23:03:10.5525 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-09-09 23:07:16.1011 Debug Targets for ChatBot.Infrastructure.LoggerManager by level:
+2021-09-09 23:07:16.1011 Debug Trace =>
+2021-09-09 23:07:16.1011 Debug Debug => logfile
+2021-09-09 23:07:16.1011 Debug Info => logfile
+2021-09-09 23:07:16.1011 Debug Warn => logfile
+2021-09-09 23:07:16.1011 Debug Error => logfile
+2021-09-09 23:07:16.1011 Debug Fatal => logfile
+2021-09-09 23:07:16.1268 Debug FileTarget(Name=logfile): Preparing for new file 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt'
+2021-09-09 23:07:16.1349 Debug Creating file appender: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt
+2021-09-09 23:07:16.1349 Trace Opening C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt with allowFileSharedWriting=False
+2021-09-09 23:08:09.6887 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:08:09.8049 Debug Found assembly location directory: 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-09-09 23:08:09.8049 Debug Auto loading based on NLog-Assembly found location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:08:09.8049 Debug Search for auto loading files in location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:08:09.8049 Debug Start auto loading, location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:08:09.8049 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:08:09.8049 Info Loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:08:09.8353 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.4.1610. Product version: 1.7.4+e2bffa9e949fb4760d75aca224e78631c063f087. GlobalAssemblyCache: False
+2021-09-09 23:08:09.8353 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:08:09.8353 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll succeeded!
+2021-09-09 23:08:09.8353 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:08:09.8353 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:08:09.8353 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-09-09 23:08:09.8353 Debug Auto loading done
+2021-09-09 23:08:09.8353 Info Message Template Auto Format enabled
+2021-09-09 23:08:09.8596 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:08:09.8596 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:08:09.8690 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:08:09.8690 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:08:09.8690 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:08:09.8690 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:08:09.8690 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:08:09.8690 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:08:09.8690 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:08:09.8690 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:08:09.8690 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:08:09.8690 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:08:09.8793 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:08:09.8793 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-09-09 23:08:09.8793 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:08:09.8793 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:08:09.8793 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-09-09 23:08:09.8793 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:08:09.8793 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:08:09.8793 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:08:09.8793 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:08:09.8793 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:08:09.8793 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:08:09.8793 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:08:09.8793 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:08:09.8793 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:08:09.8793 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:08:09.8793 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:08:09.8793 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:08:09.8793 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:08:09.8793 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:08:09.8793 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:08:09.8793 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:08:09.8793 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:08:09.8793 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:08:09.8943 Info Adding target FileTarget(Name=logfile)
+2021-09-09 23:08:09.8943 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-09-09 23:08:09.8943 Trace ParseRulesElement
+2021-09-09 23:08:09.9130 Debug Watching path 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API' filter 'nlog.config' for changes.
+2021-09-09 23:08:09.9130 Debug --- NLog configuration dump ---
+2021-09-09 23:08:09.9130 Debug Targets:
+2021-09-09 23:08:09.9130 Debug File Target[logfile]
+2021-09-09 23:08:09.9130 Debug Rules:
+2021-09-09 23:08:09.9130 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-09-09 23:08:09.9130 Debug --- End of NLog configuration dump ---
+2021-09-09 23:08:09.9130 Trace FindReachableObject<System.Object>:
+2021-09-09 23:08:09.9130 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-09-09 23:08:09.9130 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-09-09 23:08:09.9130 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:08:09.9130 Trace   Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:08:09.9130 Trace   Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:08:09.9130 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:08:09.9263 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:08:09.9263 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:08:09.9263 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:08:09.9263 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:08:09.9263 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:08:09.9263 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:08:09.9263 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:08:09.9263 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:08:09.9263 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:08:09.9263 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:08:09.9263 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:08:09.9263 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:08:09.9263 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:08:09.9263 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:08:09.9263 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:08:09.9263 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:08:09.9263 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-09-09 23:08:09.9263 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-09-09 23:08:09.9263 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/nlog.config
+2021-09-09 23:08:09.9263 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-09-09 23:08:09.9433 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-09-09 23:08:09.9433 Trace Initializing Layout Renderer: ${message}
+2021-09-09 23:08:09.9433 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:08:09.9433 Trace Initializing Layout Renderer: ${level}
+2021-09-09 23:08:09.9433 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-09-09 23:08:09.9433 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:08:09.9433 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:08:09.9433 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:08:09.9433 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:08:09.9433 Trace Initializing Layout Renderer: ${uppercase}
+2021-09-09 23:08:09.9433 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:08:09.9433 Trace Initializing Layout Renderer: ${longdate}
+2021-09-09 23:08:09.9433 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:08:09.9433 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:08:09.9433 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:08:09.9433 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:08:09.9433 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:08:09.9433 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:08:09.9433 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:08:09.9433 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:08:09.9433 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:08:09.9571 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:08:09.9571 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:08:09.9571 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:08:09.9571 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:08:09.9571 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:08:09.9571 Trace Initializing Layout Renderer: ${shortdate}
+2021-09-09 23:08:09.9571 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:08:09.9571 Trace Initializing 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:08:09.9571 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:08:09.9571 Trace Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:08:09.9571 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:08:09.9571 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:08:09.9571 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:08:09.9571 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:08:09.9571 Trace Initializing File Target[logfile]
+2021-09-09 23:08:09.9571 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-09-09 23:08:09.9571 Trace Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:08:09.9571 Trace  Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:08:09.9571 Trace  Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:08:09.9571 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:08:09.9571 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:08:09.9571 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:08:09.9571 Trace File Target[logfile] has 2 layouts
+2021-09-09 23:08:09.9571 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-09-09 23:09:59.8354 Debug Targets for ChatBot.Infrastructure.LoggerManager by level:
+2021-09-09 23:09:59.8354 Debug Trace =>
+2021-09-09 23:09:59.8354 Debug Debug => logfile
+2021-09-09 23:09:59.8354 Debug Info => logfile
+2021-09-09 23:09:59.8354 Debug Warn => logfile
+2021-09-09 23:09:59.8354 Debug Error => logfile
+2021-09-09 23:09:59.8354 Debug Fatal => logfile
+2021-09-09 23:09:59.8692 Debug FileTarget(Name=logfile): Preparing for new file 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt'
+2021-09-09 23:09:59.8692 Debug Creating file appender: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt
+2021-09-09 23:09:59.8803 Trace Opening C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt with allowFileSharedWriting=False
+2021-09-09 23:10:18.9305 Trace Opening C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt with allowFileSharedWriting=False
+2021-09-09 23:16:50.0425 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:16:50.1616 Debug Found assembly location directory: 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-09-09 23:16:50.1616 Debug Auto loading based on NLog-Assembly found location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:16:50.1616 Debug Search for auto loading files in location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:16:50.1616 Debug Start auto loading, location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:16:50.1784 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:16:50.1784 Info Loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:16:50.2044 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.4.1610. Product version: 1.7.4+e2bffa9e949fb4760d75aca224e78631c063f087. GlobalAssemblyCache: False
+2021-09-09 23:16:50.2044 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:16:50.2076 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll succeeded!
+2021-09-09 23:16:50.2076 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:16:50.2076 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:16:50.2076 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-09-09 23:16:50.2076 Debug Auto loading done
+2021-09-09 23:16:50.2076 Info Message Template Auto Format enabled
+2021-09-09 23:16:50.2307 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:16:50.2307 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:16:50.2407 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:16:50.2407 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:16:50.2407 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:16:50.2407 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:16:50.2407 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:16:50.2407 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:16:50.2407 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:16:50.2407 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:16:50.2407 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:16:50.2407 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:16:50.2407 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:16:50.2407 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-09-09 23:16:50.2407 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:16:50.2407 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:16:50.2607 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-09-09 23:16:50.2607 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:16:50.2607 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:16:50.2607 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:16:50.2607 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:16:50.2607 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:16:50.2607 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:16:50.2607 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:16:50.2607 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:16:50.2607 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:16:50.2607 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:16:50.2607 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:16:50.2607 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:16:50.2607 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:16:50.2607 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:16:50.2607 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:16:50.2607 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:16:50.2607 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:16:50.2607 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:16:50.2607 Info Adding target FileTarget(Name=logfile)
+2021-09-09 23:16:50.2607 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-09-09 23:16:50.2607 Trace ParseRulesElement
+2021-09-09 23:16:50.2907 Debug Watching path 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API' filter 'nlog.config' for changes.
+2021-09-09 23:16:50.2907 Debug --- NLog configuration dump ---
+2021-09-09 23:16:50.2907 Debug Targets:
+2021-09-09 23:16:50.2907 Debug File Target[logfile]
+2021-09-09 23:16:50.2907 Debug Rules:
+2021-09-09 23:16:50.2907 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-09-09 23:16:50.2907 Debug --- End of NLog configuration dump ---
+2021-09-09 23:16:50.3036 Trace FindReachableObject<System.Object>:
+2021-09-09 23:16:50.3036 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-09-09 23:16:50.3036 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-09-09 23:16:50.3036 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:16:50.3036 Trace   Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:16:50.3036 Trace   Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:16:50.3036 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:16:50.3036 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:16:50.3036 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:16:50.3036 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:16:50.3036 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:16:50.3036 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:16:50.3036 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:16:50.3036 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:16:50.3036 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:16:50.3036 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:16:50.3036 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:16:50.3036 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:16:50.3036 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:16:50.3036 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:16:50.3036 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:16:50.3036 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:16:50.3036 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:16:50.3036 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-09-09 23:16:50.3036 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-09-09 23:16:50.3179 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/nlog.config
+2021-09-09 23:16:50.3179 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-09-09 23:16:50.3179 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-09-09 23:16:50.3179 Trace Initializing Layout Renderer: ${message}
+2021-09-09 23:16:50.3179 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:16:50.3179 Trace Initializing Layout Renderer: ${level}
+2021-09-09 23:16:50.3179 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-09-09 23:16:50.3319 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:16:50.3319 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:16:50.3319 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:16:50.3319 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:16:50.3319 Trace Initializing Layout Renderer: ${uppercase}
+2021-09-09 23:16:50.3319 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:16:50.3319 Trace Initializing Layout Renderer: ${longdate}
+2021-09-09 23:16:50.3319 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:16:50.3319 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:16:50.3319 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:16:50.3319 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:16:50.3319 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:16:50.3319 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:16:50.3319 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:16:50.3319 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:16:50.3319 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:16:50.3319 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:16:50.3319 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:16:50.3319 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:16:50.3319 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:16:50.3319 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:16:50.3319 Trace Initializing Layout Renderer: ${shortdate}
+2021-09-09 23:16:50.3319 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:16:50.3319 Trace Initializing 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:16:50.3319 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:16:50.3319 Trace Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:16:50.3319 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:16:50.3319 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:16:50.3319 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:16:50.3319 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:16:50.3319 Trace Initializing File Target[logfile]
+2021-09-09 23:16:50.3319 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-09-09 23:16:50.3319 Trace Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:16:50.3319 Trace  Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:16:50.3319 Trace  Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:16:50.3319 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:16:50.3478 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:16:50.3478 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:16:50.3478 Trace File Target[logfile] has 2 layouts
+2021-09-09 23:16:50.3478 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-09-09 23:18:28.1676 Debug Targets for ChatBot.Infrastructure.LoggerManager by level:
+2021-09-09 23:18:28.1676 Debug Trace =>
+2021-09-09 23:18:28.1676 Debug Debug => logfile
+2021-09-09 23:18:28.1676 Debug Info => logfile
+2021-09-09 23:18:28.1676 Debug Warn => logfile
+2021-09-09 23:18:28.1676 Debug Error => logfile
+2021-09-09 23:18:28.1676 Debug Fatal => logfile
+2021-09-09 23:18:28.1767 Debug FileTarget(Name=logfile): Preparing for new file 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt'
+2021-09-09 23:18:28.1941 Debug Creating file appender: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt
+2021-09-09 23:18:28.1941 Trace Opening C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt with allowFileSharedWriting=False
+2021-09-09 23:21:09.2649 Trace Opening C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt with allowFileSharedWriting=False
+2021-09-09 23:22:15.8687 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:22:15.9755 Debug Found assembly location directory: 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-09-09 23:22:15.9755 Debug Auto loading based on NLog-Assembly found location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:22:15.9755 Debug Search for auto loading files in location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:22:15.9755 Debug Start auto loading, location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:22:15.9755 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:22:15.9755 Info Loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:22:16.0037 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.4.1610. Product version: 1.7.4+e2bffa9e949fb4760d75aca224e78631c063f087. GlobalAssemblyCache: False
+2021-09-09 23:22:16.0037 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:22:16.0037 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll succeeded!
+2021-09-09 23:22:16.0037 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:22:16.0037 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:22:16.0037 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-09-09 23:22:16.0037 Debug Auto loading done
+2021-09-09 23:22:16.0037 Info Message Template Auto Format enabled
+2021-09-09 23:22:16.0220 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:22:16.0220 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:22:16.0220 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:22:16.0220 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:22:16.0220 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:22:16.0220 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:22:16.0220 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:22:16.0220 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:22:16.0220 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:22:16.0220 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:22:16.0362 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:22:16.0362 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:22:16.0362 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:22:16.0362 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-09-09 23:22:16.0362 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:22:16.0362 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:22:16.0362 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-09-09 23:22:16.0362 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:22:16.0362 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:22:16.0362 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:22:16.0362 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:22:16.0362 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:22:16.0362 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:22:16.0362 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:22:16.0362 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:22:16.0507 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:22:16.0507 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:22:16.0507 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:22:16.0507 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:22:16.0507 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:22:16.0507 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:22:16.0507 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:22:16.0507 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:22:16.0507 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:22:16.0507 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:22:16.0507 Info Adding target FileTarget(Name=logfile)
+2021-09-09 23:22:16.0507 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-09-09 23:22:16.0507 Trace ParseRulesElement
+2021-09-09 23:22:16.0759 Debug Watching path 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API' filter 'nlog.config' for changes.
+2021-09-09 23:22:16.0759 Debug --- NLog configuration dump ---
+2021-09-09 23:22:16.0759 Debug Targets:
+2021-09-09 23:22:16.0759 Debug File Target[logfile]
+2021-09-09 23:22:16.0759 Debug Rules:
+2021-09-09 23:22:16.0759 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-09-09 23:22:16.0759 Debug --- End of NLog configuration dump ---
+2021-09-09 23:22:16.0837 Trace FindReachableObject<System.Object>:
+2021-09-09 23:22:16.0837 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-09-09 23:22:16.0837 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-09-09 23:22:16.0837 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:22:16.0837 Trace   Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:22:16.0837 Trace   Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:22:16.0837 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:22:16.0837 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:22:16.0837 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:22:16.0837 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:22:16.0837 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:22:16.0837 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:22:16.0837 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:22:16.0837 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:22:16.0837 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:22:16.0837 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:22:16.0837 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:22:16.0837 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:22:16.0837 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:22:16.0837 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:22:16.0837 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:22:16.0837 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:22:16.0837 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:22:16.0837 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-09-09 23:22:16.0837 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-09-09 23:22:16.0837 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/nlog.config
+2021-09-09 23:22:16.0977 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-09-09 23:22:16.0977 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-09-09 23:22:16.0977 Trace Initializing Layout Renderer: ${message}
+2021-09-09 23:22:16.0977 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:22:16.0977 Trace Initializing Layout Renderer: ${level}
+2021-09-09 23:22:16.0977 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-09-09 23:22:16.0977 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:22:16.0977 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:22:16.0977 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:22:16.0977 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:22:16.0977 Trace Initializing Layout Renderer: ${uppercase}
+2021-09-09 23:22:16.0977 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:22:16.0977 Trace Initializing Layout Renderer: ${longdate}
+2021-09-09 23:22:16.0977 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:22:16.0977 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:22:16.1133 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:22:16.1133 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:22:16.1133 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:22:16.1133 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:22:16.1133 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:22:16.1133 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:22:16.1133 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:22:16.1133 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:22:16.1133 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:22:16.1133 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:22:16.1133 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:22:16.1133 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:22:16.1133 Trace Initializing Layout Renderer: ${shortdate}
+2021-09-09 23:22:16.1133 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:22:16.1133 Trace Initializing 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:22:16.1133 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:22:16.1133 Trace Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:22:16.1133 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:22:16.1133 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:22:16.1133 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:22:16.1133 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:22:16.1133 Trace Initializing File Target[logfile]
+2021-09-09 23:22:16.1133 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-09-09 23:22:16.1133 Trace Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:22:16.1133 Trace  Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:22:16.1133 Trace  Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:22:16.1133 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:22:16.1133 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:22:16.1133 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:22:16.1133 Trace File Target[logfile] has 2 layouts
+2021-09-09 23:22:16.1133 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-09-09 23:23:28.4075 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:23:28.5350 Debug Found assembly location directory: 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-09-09 23:23:28.5356 Debug Auto loading based on NLog-Assembly found location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:23:28.5356 Debug Search for auto loading files in location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:23:28.5356 Debug Start auto loading, location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:23:28.5356 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:23:28.5356 Info Loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:23:28.5652 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.4.1610. Product version: 1.7.4+e2bffa9e949fb4760d75aca224e78631c063f087. GlobalAssemblyCache: False
+2021-09-09 23:23:28.5652 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:23:28.5674 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll succeeded!
+2021-09-09 23:23:28.5674 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:23:28.5674 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:23:28.5674 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-09-09 23:23:28.5674 Debug Auto loading done
+2021-09-09 23:23:28.5674 Info Message Template Auto Format enabled
+2021-09-09 23:23:28.5891 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:23:28.5891 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:23:28.5891 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:23:28.5991 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:23:28.5991 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:23:28.5991 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:23:28.5991 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:23:28.5991 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:23:28.5991 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:23:28.5991 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:23:28.5991 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:23:28.5991 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:23:28.5991 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:23:28.5991 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-09-09 23:23:28.5991 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:23:28.5991 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:23:28.5991 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-09-09 23:23:28.5991 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:23:28.5991 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:23:28.5991 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:23:28.6144 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:23:28.6144 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:23:28.6144 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:23:28.6144 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:23:28.6144 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:23:28.6144 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:23:28.6144 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:23:28.6144 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:23:28.6144 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:23:28.6144 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:23:28.6144 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:23:28.6144 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:23:28.6144 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:23:28.6144 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:23:28.6144 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:23:28.6144 Info Adding target FileTarget(Name=logfile)
+2021-09-09 23:23:28.6144 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-09-09 23:23:28.6144 Trace ParseRulesElement
+2021-09-09 23:23:28.6365 Debug Watching path 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API' filter 'nlog.config' for changes.
+2021-09-09 23:23:28.6365 Debug --- NLog configuration dump ---
+2021-09-09 23:23:28.6365 Debug Targets:
+2021-09-09 23:23:28.6365 Debug File Target[logfile]
+2021-09-09 23:23:28.6365 Debug Rules:
+2021-09-09 23:23:28.6365 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-09-09 23:23:28.6365 Debug --- End of NLog configuration dump ---
+2021-09-09 23:23:28.6365 Trace FindReachableObject<System.Object>:
+2021-09-09 23:23:28.6365 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-09-09 23:23:28.6365 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-09-09 23:23:28.6365 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:23:28.6365 Trace   Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:23:28.6365 Trace   Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:23:28.6450 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:23:28.6450 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:23:28.6450 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:23:28.6450 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:23:28.6450 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:23:28.6450 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:23:28.6450 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:23:28.6450 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:23:28.6450 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:23:28.6450 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:23:28.6450 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:23:28.6450 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:23:28.6450 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:23:28.6450 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:23:28.6450 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:23:28.6450 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:23:28.6450 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:23:28.6450 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-09-09 23:23:28.6450 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-09-09 23:23:28.6450 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/nlog.config
+2021-09-09 23:23:28.6450 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-09-09 23:23:28.6450 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-09-09 23:23:28.6613 Trace Initializing Layout Renderer: ${message}
+2021-09-09 23:23:28.6613 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:23:28.6613 Trace Initializing Layout Renderer: ${level}
+2021-09-09 23:23:28.6613 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-09-09 23:23:28.6613 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:23:28.6613 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:23:28.6613 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:23:28.6613 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:23:28.6613 Trace Initializing Layout Renderer: ${uppercase}
+2021-09-09 23:23:28.6613 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:23:28.6613 Trace Initializing Layout Renderer: ${longdate}
+2021-09-09 23:23:28.6613 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:23:28.6613 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:23:28.6613 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:23:28.6613 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:23:28.6613 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:23:28.6613 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:23:28.6613 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:23:28.6613 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:23:28.6613 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:23:28.6613 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:23:28.6613 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:23:28.6613 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:23:28.6613 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:23:28.6613 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:23:28.6759 Trace Initializing Layout Renderer: ${shortdate}
+2021-09-09 23:23:28.6759 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:23:28.6759 Trace Initializing 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:23:28.6759 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:23:28.6759 Trace Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:23:28.6759 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:23:28.6759 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:23:28.6759 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:23:28.6759 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:23:28.6759 Trace Initializing File Target[logfile]
+2021-09-09 23:23:28.6759 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-09-09 23:23:28.6759 Trace Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:23:28.6759 Trace  Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:23:28.6759 Trace  Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:23:28.6759 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:23:28.6759 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:23:28.6759 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:23:28.6759 Trace File Target[logfile] has 2 layouts
+2021-09-09 23:23:28.6759 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-09-09 23:32:27.6353 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:32:27.7689 Debug Found assembly location directory: 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-09-09 23:32:27.7689 Debug Auto loading based on NLog-Assembly found location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:32:27.7706 Debug Search for auto loading files in location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:32:27.7706 Debug Start auto loading, location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:32:27.7706 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:32:27.7706 Info Loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:32:27.8010 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.4.1610. Product version: 1.7.4+e2bffa9e949fb4760d75aca224e78631c063f087. GlobalAssemblyCache: False
+2021-09-09 23:32:27.8014 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:32:27.8014 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll succeeded!
+2021-09-09 23:32:27.8014 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:32:27.8014 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:32:27.8014 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-09-09 23:32:27.8014 Debug Auto loading done
+2021-09-09 23:32:27.8014 Info Message Template Auto Format enabled
+2021-09-09 23:32:27.8253 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:32:27.8253 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:32:27.8369 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:32:27.8369 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:32:27.8369 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:32:27.8369 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:32:27.8369 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:32:27.8369 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:32:27.8369 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:32:27.8369 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:32:27.8369 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:32:27.8369 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:32:27.8369 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:32:27.8369 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-09-09 23:32:27.8369 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:32:27.8369 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:32:27.8535 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-09-09 23:32:27.8535 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:32:27.8535 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:32:27.8535 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:32:27.8535 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:32:27.8535 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:32:27.8535 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:32:27.8535 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:32:27.8535 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:32:27.8535 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:32:27.8535 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:32:27.8535 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:32:27.8535 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:32:27.8535 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:32:27.8535 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:32:27.8535 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:32:27.8535 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:32:27.8535 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:32:27.8535 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:32:27.8535 Info Adding target FileTarget(Name=logfile)
+2021-09-09 23:32:27.8632 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-09-09 23:32:27.8632 Trace ParseRulesElement
+2021-09-09 23:32:27.8632 Debug Watching path 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API' filter 'nlog.config' for changes.
+2021-09-09 23:32:27.8794 Debug --- NLog configuration dump ---
+2021-09-09 23:32:27.8794 Debug Targets:
+2021-09-09 23:32:27.8794 Debug File Target[logfile]
+2021-09-09 23:32:27.8794 Debug Rules:
+2021-09-09 23:32:27.8794 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-09-09 23:32:27.8794 Debug --- End of NLog configuration dump ---
+2021-09-09 23:32:27.8794 Trace FindReachableObject<System.Object>:
+2021-09-09 23:32:27.8794 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-09-09 23:32:27.8794 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-09-09 23:32:27.8794 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:32:27.8794 Trace   Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:32:27.8794 Trace   Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:32:27.8794 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:32:27.8794 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:32:27.8794 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:32:27.8794 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:32:27.8794 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:32:27.8794 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:32:27.8794 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:32:27.8794 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:32:27.8794 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:32:27.8794 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:32:27.8794 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:32:27.8794 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:32:27.8794 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:32:27.8794 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:32:27.8794 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:32:27.8794 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:32:27.8794 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:32:27.8794 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-09-09 23:32:27.8794 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-09-09 23:32:27.8957 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/nlog.config
+2021-09-09 23:32:27.8957 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-09-09 23:32:27.8957 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-09-09 23:32:27.8957 Trace Initializing Layout Renderer: ${message}
+2021-09-09 23:32:27.8957 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:32:27.8957 Trace Initializing Layout Renderer: ${level}
+2021-09-09 23:32:27.8957 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-09-09 23:32:27.8957 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:32:27.8957 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:32:27.8957 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:32:27.8957 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:32:27.9121 Trace Initializing Layout Renderer: ${uppercase}
+2021-09-09 23:32:27.9121 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:32:27.9121 Trace Initializing Layout Renderer: ${longdate}
+2021-09-09 23:32:27.9121 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:32:27.9121 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:32:27.9121 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:32:27.9121 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:32:27.9121 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:32:27.9121 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:32:27.9121 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:32:27.9121 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:32:27.9121 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:32:27.9121 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:32:27.9121 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:32:27.9121 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:32:27.9121 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:32:27.9121 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:32:27.9121 Trace Initializing Layout Renderer: ${shortdate}
+2021-09-09 23:32:27.9121 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:32:27.9121 Trace Initializing 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:32:27.9121 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:32:27.9121 Trace Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:32:27.9121 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:32:27.9121 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:32:27.9121 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:32:27.9121 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:32:27.9121 Trace Initializing File Target[logfile]
+2021-09-09 23:32:27.9121 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-09-09 23:32:27.9121 Trace Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:32:27.9121 Trace  Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:32:27.9121 Trace  Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:32:27.9121 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:32:27.9121 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:32:27.9121 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:32:27.9260 Trace File Target[logfile] has 2 layouts
+2021-09-09 23:32:27.9260 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-09-09 23:33:36.5071 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:33:36.6492 Debug Found assembly location directory: 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-09-09 23:33:36.6492 Debug Auto loading based on NLog-Assembly found location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:33:36.6492 Debug Search for auto loading files in location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:33:36.6492 Debug Start auto loading, location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:33:36.6492 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:33:36.6492 Info Loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:33:36.6774 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.4.1610. Product version: 1.7.4+e2bffa9e949fb4760d75aca224e78631c063f087. GlobalAssemblyCache: False
+2021-09-09 23:33:36.6774 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:33:36.6774 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll succeeded!
+2021-09-09 23:33:36.6774 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:33:36.6774 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:33:36.6774 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-09-09 23:33:36.6774 Debug Auto loading done
+2021-09-09 23:33:36.6774 Info Message Template Auto Format enabled
+2021-09-09 23:33:36.7010 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:33:36.7010 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:33:36.7087 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:33:36.7087 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:33:36.7087 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:33:36.7087 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:33:36.7087 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:33:36.7087 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:33:36.7087 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:33:36.7087 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:33:36.7087 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:33:36.7087 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:33:36.7087 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:33:36.7087 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-09-09 23:33:36.7087 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:33:36.7087 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:33:36.7277 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-09-09 23:33:36.7277 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:33:36.7277 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:33:36.7277 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:33:36.7277 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:33:36.7277 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:33:36.7277 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:33:36.7277 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:33:36.7277 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:33:36.7277 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:33:36.7277 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:33:36.7277 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:33:36.7277 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:33:36.7277 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:33:36.7277 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:33:36.7277 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:33:36.7277 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:33:36.7277 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:33:36.7277 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:33:36.7277 Info Adding target FileTarget(Name=logfile)
+2021-09-09 23:33:36.7390 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-09-09 23:33:36.7390 Trace ParseRulesElement
+2021-09-09 23:33:36.7574 Debug Watching path 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API' filter 'nlog.config' for changes.
+2021-09-09 23:33:36.7574 Debug --- NLog configuration dump ---
+2021-09-09 23:33:36.7574 Debug Targets:
+2021-09-09 23:33:36.7574 Debug File Target[logfile]
+2021-09-09 23:33:36.7574 Debug Rules:
+2021-09-09 23:33:36.7574 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-09-09 23:33:36.7574 Debug --- End of NLog configuration dump ---
+2021-09-09 23:33:36.7574 Trace FindReachableObject<System.Object>:
+2021-09-09 23:33:36.7574 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-09-09 23:33:36.7574 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-09-09 23:33:36.7574 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:33:36.7574 Trace   Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:33:36.7574 Trace   Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:33:36.7574 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:33:36.7574 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:33:36.7574 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:33:36.7696 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:33:36.7696 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:33:36.7696 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:33:36.7696 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:33:36.7696 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:33:36.7696 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:33:36.7696 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:33:36.7696 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:33:36.7696 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:33:36.7696 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:33:36.7696 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:33:36.7696 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:33:36.7696 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:33:36.7696 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:33:36.7696 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-09-09 23:33:36.7696 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-09-09 23:33:36.7696 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/nlog.config
+2021-09-09 23:33:36.7696 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-09-09 23:33:36.7872 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-09-09 23:33:36.7872 Trace Initializing Layout Renderer: ${message}
+2021-09-09 23:33:36.7872 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:33:36.7872 Trace Initializing Layout Renderer: ${level}
+2021-09-09 23:33:36.7872 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-09-09 23:33:36.7872 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:33:36.7872 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:33:36.7872 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:33:36.7872 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:33:36.7872 Trace Initializing Layout Renderer: ${uppercase}
+2021-09-09 23:33:36.7872 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:33:36.7872 Trace Initializing Layout Renderer: ${longdate}
+2021-09-09 23:33:36.7872 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:33:36.7872 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:33:36.7872 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:33:36.7872 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:33:36.8015 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:33:36.8015 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:33:36.8015 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:33:36.8015 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:33:36.8015 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:33:36.8015 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:33:36.8015 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:33:36.8015 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:33:36.8015 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:33:36.8015 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:33:36.8015 Trace Initializing Layout Renderer: ${shortdate}
+2021-09-09 23:33:36.8015 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:33:36.8015 Trace Initializing 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:33:36.8015 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:33:36.8015 Trace Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:33:36.8015 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:33:36.8015 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:33:36.8015 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:33:36.8015 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:33:36.8015 Trace Initializing File Target[logfile]
+2021-09-09 23:33:36.8015 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-09-09 23:33:36.8015 Trace Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:33:36.8015 Trace  Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:33:36.8015 Trace  Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:33:36.8015 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:33:36.8015 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:33:36.8015 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:33:36.8015 Trace File Target[logfile] has 2 layouts
+2021-09-09 23:33:36.8015 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-09-09 23:36:12.5301 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:36:12.6535 Debug Found assembly location directory: 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-09-09 23:36:12.6535 Debug Auto loading based on NLog-Assembly found location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:36:12.6535 Debug Search for auto loading files in location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:36:12.6616 Debug Start auto loading, location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:36:12.6616 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:36:12.6616 Info Loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:36:12.6827 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.4.1610. Product version: 1.7.4+e2bffa9e949fb4760d75aca224e78631c063f087. GlobalAssemblyCache: False
+2021-09-09 23:36:12.6827 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:36:12.6827 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll succeeded!
+2021-09-09 23:36:12.6827 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:36:12.6827 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:36:12.6827 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-09-09 23:36:12.6827 Debug Auto loading done
+2021-09-09 23:36:12.6827 Info Message Template Auto Format enabled
+2021-09-09 23:36:12.7069 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:36:12.7069 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:36:12.7069 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:36:12.7069 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:36:12.7069 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:36:12.7069 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:36:12.7069 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:36:12.7069 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:36:12.7069 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:36:12.7069 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:36:12.7069 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:36:12.7235 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:36:12.7235 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:36:12.7235 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-09-09 23:36:12.7235 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:36:12.7235 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:36:12.7235 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-09-09 23:36:12.7235 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:36:12.7235 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:36:12.7235 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:36:12.7235 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:36:12.7235 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:36:12.7235 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:36:12.7235 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:36:12.7235 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:36:12.7235 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:36:12.7235 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:36:12.7235 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:36:12.7235 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:36:12.7235 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:36:12.7235 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:36:12.7391 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:36:12.7391 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:36:12.7391 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:36:12.7391 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:36:12.7391 Info Adding target FileTarget(Name=logfile)
+2021-09-09 23:36:12.7391 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-09-09 23:36:12.7391 Trace ParseRulesElement
+2021-09-09 23:36:12.7626 Debug Watching path 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API' filter 'nlog.config' for changes.
+2021-09-09 23:36:12.7626 Debug --- NLog configuration dump ---
+2021-09-09 23:36:12.7626 Debug Targets:
+2021-09-09 23:36:12.7626 Debug File Target[logfile]
+2021-09-09 23:36:12.7626 Debug Rules:
+2021-09-09 23:36:12.7626 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-09-09 23:36:12.7626 Debug --- End of NLog configuration dump ---
+2021-09-09 23:36:12.7706 Trace FindReachableObject<System.Object>:
+2021-09-09 23:36:12.7706 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-09-09 23:36:12.7706 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-09-09 23:36:12.7706 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:36:12.7706 Trace   Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:36:12.7706 Trace   Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:36:12.7706 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:36:12.7706 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:36:12.7706 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:36:12.7706 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:36:12.7706 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:36:12.7706 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:36:12.7706 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:36:12.7706 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:36:12.7706 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:36:12.7706 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:36:12.7706 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:36:12.7706 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:36:12.7706 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:36:12.7706 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:36:12.7706 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:36:12.7706 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:36:12.7706 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:36:12.7706 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-09-09 23:36:12.7706 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-09-09 23:36:12.7706 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/nlog.config
+2021-09-09 23:36:12.7706 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-09-09 23:36:12.7913 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-09-09 23:36:12.7913 Trace Initializing Layout Renderer: ${message}
+2021-09-09 23:36:12.7913 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:36:12.7913 Trace Initializing Layout Renderer: ${level}
+2021-09-09 23:36:12.7913 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-09-09 23:36:12.7913 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:36:12.7913 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:36:12.7913 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:36:12.7913 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:36:12.8023 Trace Initializing Layout Renderer: ${uppercase}
+2021-09-09 23:36:12.8023 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:36:12.8023 Trace Initializing Layout Renderer: ${longdate}
+2021-09-09 23:36:12.8023 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:36:12.8023 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:36:12.8023 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:36:12.8023 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:36:12.8023 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:36:12.8023 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:36:12.8023 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:36:12.8023 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:36:12.8023 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:36:12.8023 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:36:12.8023 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:36:12.8023 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:36:12.8023 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:36:12.8023 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:36:12.8023 Trace Initializing Layout Renderer: ${shortdate}
+2021-09-09 23:36:12.8023 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:36:12.8023 Trace Initializing 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:36:12.8023 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:36:12.8023 Trace Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:36:12.8023 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:36:12.8023 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:36:12.8023 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:36:12.8023 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:36:12.8023 Trace Initializing File Target[logfile]
+2021-09-09 23:36:12.8023 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-09-09 23:36:12.8023 Trace Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:36:12.8023 Trace  Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:36:12.8023 Trace  Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:36:12.8023 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:36:12.8166 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:36:12.8166 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:36:12.8166 Trace File Target[logfile] has 2 layouts
+2021-09-09 23:36:12.8166 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-09-09 23:36:52.5875 Debug Targets for ChatBot.Infrastructure.LoggerManager by level:
+2021-09-09 23:36:52.5875 Debug Trace =>
+2021-09-09 23:36:52.5875 Debug Debug => logfile
+2021-09-09 23:36:52.5875 Debug Info => logfile
+2021-09-09 23:36:52.5875 Debug Warn => logfile
+2021-09-09 23:36:52.5875 Debug Error => logfile
+2021-09-09 23:36:52.5875 Debug Fatal => logfile
+2021-09-09 23:36:52.6002 Debug FileTarget(Name=logfile): Preparing for new file 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt'
+2021-09-09 23:36:52.6186 Debug Creating file appender: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt
+2021-09-09 23:36:52.6186 Trace Opening C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt with allowFileSharedWriting=False
+2021-09-09 23:37:28.4818 Trace Opening C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt with allowFileSharedWriting=False
+2021-09-09 23:38:47.5789 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:38:47.6859 Debug Found assembly location directory: 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-09-09 23:38:47.6859 Debug Auto loading based on NLog-Assembly found location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:38:47.6923 Debug Search for auto loading files in location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:38:47.6923 Debug Start auto loading, location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:38:47.6923 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:38:47.6923 Info Loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:38:47.7195 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.4.1610. Product version: 1.7.4+e2bffa9e949fb4760d75aca224e78631c063f087. GlobalAssemblyCache: False
+2021-09-09 23:38:47.7195 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:38:47.7195 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll succeeded!
+2021-09-09 23:38:47.7236 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:38:47.7236 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:38:47.7236 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-09-09 23:38:47.7236 Debug Auto loading done
+2021-09-09 23:38:47.7236 Info Message Template Auto Format enabled
+2021-09-09 23:38:47.7236 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:38:47.7401 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:38:47.7401 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:38:47.7401 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:38:47.7401 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:38:47.7401 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:38:47.7401 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:38:47.7401 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:38:47.7401 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:38:47.7401 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:38:47.7401 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:38:47.7401 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:38:47.7401 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:38:47.7401 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-09-09 23:38:47.7401 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:38:47.7401 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:38:47.7570 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-09-09 23:38:47.7570 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:38:47.7570 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:38:47.7570 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:38:47.7570 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:38:47.7570 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:38:47.7570 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:38:47.7570 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:38:47.7570 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:38:47.7570 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:38:47.7570 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:38:47.7570 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:38:47.7570 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:38:47.7570 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:38:47.7570 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:38:47.7570 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:38:47.7570 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:38:47.7570 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:38:47.7570 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:38:47.7570 Info Adding target FileTarget(Name=logfile)
+2021-09-09 23:38:47.7570 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-09-09 23:38:47.7570 Trace ParseRulesElement
+2021-09-09 23:38:47.7776 Debug Watching path 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API' filter 'nlog.config' for changes.
+2021-09-09 23:38:47.7776 Debug --- NLog configuration dump ---
+2021-09-09 23:38:47.7776 Debug Targets:
+2021-09-09 23:38:47.7776 Debug File Target[logfile]
+2021-09-09 23:38:47.7776 Debug Rules:
+2021-09-09 23:38:47.7776 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-09-09 23:38:47.7776 Debug --- End of NLog configuration dump ---
+2021-09-09 23:38:47.7855 Trace FindReachableObject<System.Object>:
+2021-09-09 23:38:47.7855 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-09-09 23:38:47.7855 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-09-09 23:38:47.7855 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:38:47.7855 Trace   Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:38:47.7855 Trace   Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:38:47.7855 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:38:47.7855 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:38:47.7855 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:38:47.7855 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:38:47.7855 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:38:47.7855 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:38:47.7855 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:38:47.7855 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:38:47.7855 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:38:47.7855 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:38:47.7855 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:38:47.7855 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:38:47.7855 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:38:47.7855 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:38:47.7855 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:38:47.7855 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:38:47.7855 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:38:47.7855 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-09-09 23:38:47.7855 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-09-09 23:38:47.7855 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/nlog.config
+2021-09-09 23:38:47.7855 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-09-09 23:38:47.8029 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-09-09 23:38:47.8029 Trace Initializing Layout Renderer: ${message}
+2021-09-09 23:38:47.8029 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:38:47.8029 Trace Initializing Layout Renderer: ${level}
+2021-09-09 23:38:47.8029 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-09-09 23:38:47.8029 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:38:47.8029 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:38:47.8029 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:38:47.8029 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:38:47.8029 Trace Initializing Layout Renderer: ${uppercase}
+2021-09-09 23:38:47.8029 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:38:47.8029 Trace Initializing Layout Renderer: ${longdate}
+2021-09-09 23:38:47.8029 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:38:47.8029 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:38:47.8029 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:38:47.8029 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:38:47.8029 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:38:47.8029 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:38:47.8029 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:38:47.8029 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:38:47.8029 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:38:47.8029 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:38:47.8029 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:38:47.8162 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:38:47.8162 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:38:47.8162 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:38:47.8162 Trace Initializing Layout Renderer: ${shortdate}
+2021-09-09 23:38:47.8162 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:38:47.8162 Trace Initializing 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:38:47.8162 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:38:47.8162 Trace Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:38:47.8162 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:38:47.8162 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:38:47.8162 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:38:47.8162 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:38:47.8162 Trace Initializing File Target[logfile]
+2021-09-09 23:38:47.8162 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-09-09 23:38:47.8162 Trace Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:38:47.8162 Trace  Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:38:47.8162 Trace  Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:38:47.8162 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:38:47.8162 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:38:47.8162 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:38:47.8162 Trace File Target[logfile] has 2 layouts
+2021-09-09 23:38:47.8162 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2021-09-09 23:39:01.2635 Debug Targets for ChatBot.Infrastructure.LoggerManager by level:
+2021-09-09 23:39:01.2635 Debug Trace =>
+2021-09-09 23:39:01.2635 Debug Debug => logfile
+2021-09-09 23:39:01.2635 Debug Info => logfile
+2021-09-09 23:39:01.2635 Debug Warn => logfile
+2021-09-09 23:39:01.2635 Debug Error => logfile
+2021-09-09 23:39:01.2635 Debug Fatal => logfile
+2021-09-09 23:39:01.2835 Debug FileTarget(Name=logfile): Preparing for new file 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt'
+2021-09-09 23:39:01.2890 Debug Creating file appender: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt
+2021-09-09 23:39:01.2890 Trace Opening C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt with allowFileSharedWriting=False
+2021-09-09 23:39:24.0791 Trace Opening C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt with allowFileSharedWriting=False
+2021-09-09 23:39:38.9924 Trace Opening C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt with allowFileSharedWriting=False
+2021-09-09 23:39:56.8046 Trace Opening C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt with allowFileSharedWriting=False
+2021-09-09 23:40:04.9559 Trace Opening C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt with allowFileSharedWriting=False
+2021-09-09 23:42:10.4063 Trace Opening C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\2021-09-09_logfile.txt with allowFileSharedWriting=False
+2021-09-09 23:43:18.7189 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:43:18.8408 Debug Found assembly location directory: 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2021-09-09 23:43:18.8408 Debug Auto loading based on NLog-Assembly found location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:43:18.8408 Debug Search for auto loading files in location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:43:18.8498 Debug Start auto loading, location: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1
+2021-09-09 23:43:18.8498 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:43:18.8498 Info Loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+2021-09-09 23:43:18.8687 Info NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 1.7.4.1610. Product version: 1.7.4+e2bffa9e949fb4760d75aca224e78631c063f087. GlobalAssemblyCache: False
+2021-09-09 23:43:18.8687 Debug ScanAssembly('NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2021-09-09 23:43:18.8687 Info Auto loading assembly file: C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll succeeded!
+2021-09-09 23:43:18.8687 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:43:18.8687 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2021-09-09 23:43:18.8687 Trace Assembly 'NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c' will be hidden in callsite stacktrace
+2021-09-09 23:43:18.8687 Debug Auto loading done
+2021-09-09 23:43:18.8687 Info Message Template Auto Format enabled
+2021-09-09 23:43:18.8907 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:43:18.8907 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:43:18.8996 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:43:18.8996 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:43:18.8996 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:43:18.8996 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:43:18.8996 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:43:18.8996 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:43:18.8996 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:43:18.8996 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:43:18.8996 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:43:18.8996 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:43:18.8996 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:43:18.8996 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2021-09-09 23:43:18.8996 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:43:18.8996 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:43:18.9156 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2021-09-09 23:43:18.9156 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:43:18.9156 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:43:18.9156 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:43:18.9156 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:43:18.9156 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:43:18.9156 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:43:18.9156 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2021-09-09 23:43:18.9156 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2021-09-09 23:43:18.9156 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:43:18.9156 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:43:18.9156 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:43:18.9156 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:43:18.9156 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:43:18.9156 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:43:18.9156 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:43:18.9156 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:43:18.9156 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:43:18.9156 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:43:18.9156 Info Adding target FileTarget(Name=logfile)
+2021-09-09 23:43:18.9156 Debug Registered target logfile: NLog.Targets.FileTarget
+2021-09-09 23:43:18.9156 Trace ParseRulesElement
+2021-09-09 23:43:18.9367 Debug Watching path 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API' filter 'nlog.config' for changes.
+2021-09-09 23:43:18.9367 Debug --- NLog configuration dump ---
+2021-09-09 23:43:18.9367 Debug Targets:
+2021-09-09 23:43:18.9367 Debug File Target[logfile]
+2021-09-09 23:43:18.9367 Debug Rules:
+2021-09-09 23:43:18.9367 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2021-09-09 23:43:18.9367 Debug --- End of NLog configuration dump ---
+2021-09-09 23:43:18.9443 Trace FindReachableObject<System.Object>:
+2021-09-09 23:43:18.9443 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2021-09-09 23:43:18.9443 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2021-09-09 23:43:18.9443 Trace  Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:43:18.9443 Trace   Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:43:18.9443 Trace   Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:43:18.9443 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:43:18.9443 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:43:18.9443 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:43:18.9443 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:43:18.9443 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:43:18.9443 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:43:18.9443 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:43:18.9443 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:43:18.9443 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:43:18.9443 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:43:18.9443 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:43:18.9443 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:43:18.9443 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:43:18.9443 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:43:18.9443 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:43:18.9443 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:43:18.9443 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:43:18.9443 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2021-09-09 23:43:18.9443 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2021-09-09 23:43:18.9443 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/nlog.config
+2021-09-09 23:43:18.9443 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2021-09-09 23:43:18.9599 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2021-09-09 23:43:18.9599 Trace Initializing Layout Renderer: ${message}
+2021-09-09 23:43:18.9599 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:43:18.9599 Trace Initializing Layout Renderer: ${level}
+2021-09-09 23:43:18.9599 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2021-09-09 23:43:18.9599 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:43:18.9599 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:43:18.9599 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:43:18.9599 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:43:18.9599 Trace Initializing Layout Renderer: ${uppercase}
+2021-09-09 23:43:18.9599 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:43:18.9599 Trace Initializing Layout Renderer: ${longdate}
+2021-09-09 23:43:18.9599 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2021-09-09 23:43:18.9599 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:43:18.9599 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:43:18.9599 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:43:18.9599 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2021-09-09 23:43:18.9599 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:43:18.9599 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2021-09-09 23:43:18.9599 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2021-09-09 23:43:18.9599 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2021-09-09 23:43:18.9599 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:43:18.9599 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2021-09-09 23:43:18.9599 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:43:18.9599 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2021-09-09 23:43:18.9599 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:43:18.9599 Trace Initializing Layout Renderer: ${shortdate}
+2021-09-09 23:43:18.9599 Trace Initializing Layout Renderer: ${literal}
+2021-09-09 23:43:18.9730 Trace Initializing 'C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'
+2021-09-09 23:43:18.9730 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2021-09-09 23:43:18.9730 Trace Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:43:18.9730 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2021-09-09 23:43:18.9730 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:43:18.9730 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2021-09-09 23:43:18.9730 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2021-09-09 23:43:18.9730 Trace Initializing File Target[logfile]
+2021-09-09 23:43:18.9730 Trace FindReachableObject<NLog.Layouts.Layout>:
+2021-09-09 23:43:18.9730 Trace Scanning FileTarget 'File Target[logfile]'
+2021-09-09 23:43:18.9730 Trace  Scanning Property FileName ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt'' NLog.Layouts
+2021-09-09 23:43:18.9730 Trace  Scanning SimpleLayout ''C:\Users\Kalit\source\repos\ChatBot.API\ChatBot.API/Project\logs\${shortdate}_logfile.txt''
+2021-09-09 23:43:18.9730 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2021-09-09 23:43:18.9730 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2021-09-09 23:43:18.9730 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2021-09-09 23:43:18.9730 Trace File Target[logfile] has 2 layouts
+2021-09-09 23:43:18.9730 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
