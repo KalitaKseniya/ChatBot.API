@@ -1,4 +1,5 @@
 using ChatBot.API.Extensions;
+using ChatBot.Core.Interfaces;
 using ChatBot.Core.Models;
 using ChatBot.Infrastructure;
 using ChatBot.Infrastructure.Models;
@@ -40,7 +41,7 @@ namespace ChatBot.API
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerManager logger)
         {
             app.UseSwagger();
             app.UseSwaggerUI(c =>
@@ -52,7 +53,8 @@ namespace ChatBot.API
             {
                 app.UseDeveloperExceptionPage();
             }
-                        app.UseHttpsRedirection();
+            app.ConfigureExceptionHandler(logger);
+            app.UseHttpsRedirection();
 
             app.UseRouting();
             app.UseAuthentication();
