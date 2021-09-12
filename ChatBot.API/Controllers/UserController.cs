@@ -89,17 +89,17 @@ namespace ChatBot.API.Controllers
             await _userManager.UpdateAsync(user);
             return Ok(user);
         }
-        
+
         [HttpPut("{id}/password-change")]
         public async Task<IActionResult> ChangeUsersPassword(string id, PasswordChangeDto passwordsDto)
         {
             var user = await _userManager.FindByIdAsync(id);
-            if(user == null)
+            if (user == null)
             {
                 _logger.LogError($"User with id = {id} not found");
                 return NotFound();
             }
-            if(!await _userManager.CheckPasswordAsync(user, passwordsDto.OldPassword))
+            if (!await _userManager.CheckPasswordAsync(user, passwordsDto.OldPassword))
             {
                 _logger.LogError("Wrong old password");
                 return BadRequest("Wrong old password");
@@ -121,6 +121,19 @@ namespace ChatBot.API.Controllers
 
             await _userManager.DeleteAsync(user);
             return Ok(user);
+        }
+
+        [HttpGet("{id}/roles")]
+        public async Task<IActionResult> GetRolesForUser(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                _logger.LogError($"User with id = {id} not found");
+                return NotFound();
+            }
+            var userRoles = await _userManager.GetRolesAsync(user);
+            return Ok(userRoles);
         }
     }
 }
