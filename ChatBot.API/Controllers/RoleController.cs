@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace ChatBot.API.Controllers
 {
     [ApiController]
-    [Route("api/roles")]
+    [Route("api/admin/roles")]
     public class RoleController : Controller
     {
         private readonly RoleManager<IdentityRole> _roleManager;

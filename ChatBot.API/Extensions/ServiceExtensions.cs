@@ -108,6 +108,17 @@ namespace ChatBot.API.Extensions
                 });
             });
         }
+    
+        public static void ConfigureCors(this IServiceCollection services)
+        {
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("CorsPolicy", builder =>
+                    builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
+            });
+        }
     }
 }
 
