@@ -1,6 +1,8 @@
 ﻿using ChatBot.Core.Dtos;
 using ChatBot.Core.Interfaces;
+using ChatBot.Core.Models;
 using ChatBot.Infrastructure.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -41,7 +43,7 @@ namespace ChatBot.API.Controllers
             return Ok(user);
         }
 
-
+        [Authorize(Policy = PolicyTypes.Users.Manage)]
         [HttpPost]
         public async Task<IActionResult> CreateUser(UserForCreationDto userDto)
         {

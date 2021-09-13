@@ -13,6 +13,7 @@ using Microsoft.OpenApi.Models;
 using System.Collections.Generic;
 using System.Reflection;
 using System.IO;
+using ChatBot.Core.Models;
 
 namespace ChatBot.API.Extensions
 {
@@ -58,8 +59,8 @@ namespace ChatBot.API.Extensions
                     ValidateAudience = true,
                     ValidateIssuer = true,
                     ValidateLifetime = true,
-                    ValidateIssuerSigningKey = true,
-
+                    ValidateIssuerSigningKey = false,
+                    
                     ValidAudience = jwtSettings.GetSection("validAudience").Value,
                     ValidIssuer = jwtSettings.GetSection("validIssuer").Value,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey + secretKey))
@@ -117,6 +118,18 @@ namespace ChatBot.API.Extensions
                     builder.AllowAnyOrigin()
                     .AllowAnyMethod()
                     .AllowAnyHeader());
+            });
+        }
+
+        public static void ConfigureAuth(this IServiceCollection services)
+        {
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy(PolicyTypes.Chats.Manage, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Chats.Delete); });
+                options.AddPolicy(PolicyTypes.Chats.AddRemove, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Chats.AddRemove); });
+                options.AddPolicy(PolicyTypes.Users.Manage, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.Add); });
+                options.AddPolicy(PolicyTypes.Users.Manage, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.Edit); });
+                options.AddPolicy(PolicyTypes.Users.EditRole, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.EditRole); });
             });
         }
     }

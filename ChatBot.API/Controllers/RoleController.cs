@@ -1,10 +1,12 @@
 ﻿using ChatBot.Core.Dtos;
 using ChatBot.Core.Interfaces;
+using ChatBot.Core.Models;
 using ChatBot.Infrastructure.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace ChatBot.API.Controllers
@@ -23,6 +25,26 @@ namespace ChatBot.API.Controllers
             _roleManager = roleManager;
             _logger = logger;
             _userManager = userManager;
+        }
+
+        [HttpPost("init")]
+        public async Task<IActionResult> InitData()
+        {
+            await _roleManager.CreateAsync(new IdentityRole("Admin"));
+
+            await _roleManager.CreateAsync(new IdentityRole("User"));
+
+            var userRole = await _roleManager.FindByNameAsync("User");
+
+            await _roleManager.AddClaimAsync(userRole, new Claim(CustomClaimTypes.Permission, Permissions.Chats.Delete));
+
+            var adminRole = await _roleManager.FindByNameAsync("Admin");
+
+            await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Users.Add));
+
+            //await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Chats.));
+            return Ok();
+
         }
 
         [HttpGet]

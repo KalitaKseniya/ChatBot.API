@@ -1,6 +1,7 @@
 ﻿using ChatBot.Core.Dtos;
 using ChatBot.Core.Interfaces;
 using ChatBot.Core.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChatBot.API.Controllers
@@ -80,6 +81,7 @@ namespace ChatBot.API.Controllers
             return Ok(chat);
         }
         
+        [Authorize(Policy = PolicyTypes.Chats.Manage)]
         [HttpDelete("{id}")]
         public IActionResult DeleteChat(int id)
         {

@@ -8,6 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,11 +19,14 @@ namespace ChatBot.Infrastructure
     {
         private  User _user;
         private readonly UserManager<User> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IConfiguration _configuration;
         public AuthenticationManager(UserManager<User> userManager,
-                                     IConfiguration configuration)
+                                     IConfiguration configuration,
+                                     RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
+            _roleManager = roleManager;
             _configuration = configuration;
         }
         public async Task<string> CreateToken()
@@ -43,25 +47,36 @@ namespace ChatBot.Infrastructure
 
         private SigningCredentials GetSigniningCredentials()
         {
-            var key = Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable("SECRET"));
-            var secret = new SymmetricSecurityKey(key);
+            var key = (Environment.GetEnvironmentVariable("SECRET"));
+            var secret = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key + key));
 
             return new SigningCredentials(secret, SecurityAlgorithms.HmacSha256);
         }
 
         private async Task<List<Claim>> GetClaims()
         {
-            var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, _user.UserName)
-            };
             var roles = await _userManager.GetRolesAsync(_user);
-            foreach(var role in roles)
+            //var userRoles = roles.Select(r => new Claim(ClaimTypes.Role, r)).ToArray();
+            var userClaims = await _userManager.GetClaimsAsync(_user).ConfigureAwait(false);
+            IList<Claim> roleClaims = new List<Claim>();
+
+            foreach (var userRole in roles)
             {
-                claims.Add(new Claim(ClaimTypes.Role, role));
+                var role = await _roleManager.FindByNameAsync(userRole);
+                IList<Claim> claims_ = await _roleManager.GetClaimsAsync(role).ConfigureAwait(false);
+                foreach(var claim_ in claims_)
+                {
+                    roleClaims.Add(claim_);
+                }
             }
 
-            return claims;
+            var claims = new[]
+            {
+                new Claim(ClaimTypes.Name, _user.UserName)
+            }.Union(userClaims).Union(roleClaims).ToList();//.Union(userRoles);
+            
+            
+            return (List<Claim>)claims;
         }
 
         private JwtSecurityToken GenerateTokenOptions(SigningCredentials signingCredentials,
