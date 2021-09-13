@@ -33,24 +33,28 @@ namespace ChatBot.Infrastructure
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new RoleConfiguration());
-            modelBuilder.HasAnnotation("Relational:Collation", "Cyrillic_General_CI_AS");
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new UserRolesConfiguration());
 
-            modelBuilder.Entity<Chat>(entity =>
-            {
-                entity.Property(e => e.BotResponse)
-                    .IsRequired()
-                    .HasMaxLength(2000);
 
-                entity.Property(e => e.NextIds)
-                    .HasMaxLength(20)
-                    .HasColumnName("NextIDs");
+            //modelBuilder.HasAnnotation("Relational:Collation", "Cyrillic_General_CI_AS");
 
-                entity.Property(e => e.UserRequest)
-                    .IsRequired()
-                    .HasMaxLength(300);
-            });
+            //modelBuilder.Entity<Chat>(entity =>
+            //{
+            //    entity.Property(e => e.BotResponse)
+            //        .IsRequired()
+            //        .HasMaxLength(2000);
 
-            OnModelCreatingPartial(modelBuilder);
+            //    entity.Property(e => e.NextIds)
+            //        .HasMaxLength(20)
+            //        .HasColumnName("NextIDs");
+
+            //    entity.Property(e => e.UserRequest)
+            //        .IsRequired()
+            //        .HasMaxLength(300);
+            //});
+
+            //OnModelCreatingPartial(modelBuilder);
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
