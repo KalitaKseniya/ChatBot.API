@@ -34,7 +34,7 @@ namespace ChatBot.Infrastructure
             var signingCredentials = GetSigniningCredentials();
             var claims = await GetClaims();
             var tokenOptions = GenerateTokenOptions(signingCredentials, claims);
-
+            
             return new JwtSecurityTokenHandler().WriteToken(tokenOptions);
         }
 
@@ -53,11 +53,12 @@ namespace ChatBot.Infrastructure
             return new SigningCredentials(secret, SecurityAlgorithms.HmacSha256);
         }
 
-        private async Task<List<Claim>> GetClaims()
+        private async Task<IEnumerable<Claim>> GetClaims()
         {
             var roles = await _userManager.GetRolesAsync(_user);
-            //var userRoles = roles.Select(r => new Claim(ClaimTypes.Role, r)).ToArray();
+            var userRoles = roles.Select(r => new Claim(ClaimTypes.Role, r)).ToArray();
             var userClaims = await _userManager.GetClaimsAsync(_user).ConfigureAwait(false);
+            
             IList<Claim> roleClaims = new List<Claim>();
 
             foreach (var userRole in roles)
@@ -72,15 +73,17 @@ namespace ChatBot.Infrastructure
 
             var claims = new[]
             {
+                new Claim(ClaimTypes.NameIdentifier, _user.Id.ToString()),
+                new Claim(ClaimTypes.Email, _user.Email),
                 new Claim(ClaimTypes.Name, _user.UserName)
-            }.Union(userClaims).Union(roleClaims).ToList();//.Union(userRoles);
+            }.Union(userClaims).Union(roleClaims).Union(userRoles);
             
             
-            return (List<Claim>)claims;
+            return claims;
         }
 
         private JwtSecurityToken GenerateTokenOptions(SigningCredentials signingCredentials,
-                                                      List<Claim> claims)
+                                                      IEnumerable<Claim> claims)
         {
             var jwtSettings = _configuration.GetSection("JwtSettings");
 

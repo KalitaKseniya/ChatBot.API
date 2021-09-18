@@ -59,7 +59,7 @@ namespace ChatBot.API.Extensions
                     ValidateAudience = true,
                     ValidateIssuer = true,
                     ValidateLifetime = true,
-                    ValidateIssuerSigningKey = false,
+                    ValidateIssuerSigningKey = true,
                     
                     ValidAudience = jwtSettings.GetSection("validAudience").Value,
                     ValidIssuer = jwtSettings.GetSection("validIssuer").Value,
@@ -125,11 +125,11 @@ namespace ChatBot.API.Extensions
         {
             services.AddAuthorization(options =>
             {
-                options.AddPolicy(PolicyTypes.Chats.Manage, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Chats.Delete); });
-                options.AddPolicy(PolicyTypes.Chats.AddRemove, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Chats.AddRemove); });
-                options.AddPolicy(PolicyTypes.Users.Manage, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.Add); });
-                options.AddPolicy(PolicyTypes.Users.Manage, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.Edit); });
-                options.AddPolicy(PolicyTypes.Users.EditRole, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.EditRole); });
+                //options.AddPolicy(PolicyTypes.Chats.Manage, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Chats.Delete); });
+                options.AddPolicy(PolicyTypes.Chats.AddRemove, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Chats.Delete); });
+                //options.AddPolicy(PolicyTypes.Users.Manage, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.Add); });
+                //options.AddPolicy(PolicyTypes.Users.Manage, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.Edit); });
+                //options.AddPolicy(PolicyTypes.Users.EditRole, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.EditRole); });
             });
         }
     }

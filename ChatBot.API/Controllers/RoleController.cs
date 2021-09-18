@@ -30,17 +30,19 @@ namespace ChatBot.API.Controllers
         [HttpPost("init")]
         public async Task<IActionResult> InitData()
         {
-            await _roleManager.CreateAsync(new IdentityRole("Admin"));
+            //await _roleManager.CreateAsync(new IdentityRole("Admin"));
 
             await _roleManager.CreateAsync(new IdentityRole("User"));
 
             var userRole = await _roleManager.FindByNameAsync("User");
 
             await _roleManager.AddClaimAsync(userRole, new Claim(CustomClaimTypes.Permission, Permissions.Chats.Delete));
+           
+            //await _roleManager.AddClaimAsync(userRole, new Claim(CustomClaimTypes.Permission, Permissions.Users.Add));
 
-            var adminRole = await _roleManager.FindByNameAsync("Admin");
+            //var adminRole = await _roleManager.FindByNameAsync("Admin");
 
-            await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Users.Add));
+            //await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Users.Add));
 
             //await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Chats.));
             return Ok();

@@ -12,7 +12,7 @@ namespace ChatBot.Core.Models
 
         public static class Chats
         {
-            public const string AddRemove = "chats.addremove";
+            //public const string AddRemove = "chats.addremove";
             public const string Delete = "chats.delete";
         }
     }

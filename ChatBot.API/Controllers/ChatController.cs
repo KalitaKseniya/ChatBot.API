@@ -80,8 +80,7 @@ namespace ChatBot.API.Controllers
 
             return Ok(chat);
         }
-        
-        [Authorize(Policy = PolicyTypes.Chats.Manage)]
+        [Authorize(Policy = PolicyTypes.Chats.AddRemove )]
         [HttpDelete("{id}")]
         public IActionResult DeleteChat(int id)
         {
