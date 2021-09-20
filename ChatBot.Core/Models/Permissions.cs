@@ -15,10 +15,9 @@ namespace ChatBot.Core.Models
 
         public static class Chats
         {
-            public const string Add = "chats.add";
+            public const string AddRemove = "chats.addremove";
             public const string Edit = "chats.edit";
             public const string ViewById = "chats.viewById";
-            public const string Delete = "chats.delete";
         }
 
         public static class Claims

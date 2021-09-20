@@ -27,6 +27,7 @@ namespace ChatBot.API.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(Policy = PolicyTypes.Chats.ViewById)]
         public IActionResult GetChatById(int id)
         {
             var chat = _repository.Chat.GetChat(id, false);
@@ -40,6 +41,7 @@ namespace ChatBot.API.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = PolicyTypes.Chats.AddRemove)]
         public IActionResult CreateChat(ChatForManipulationDto chatDto)
         {
             if(chatDto == null)
@@ -60,6 +62,7 @@ namespace ChatBot.API.Controllers
         }
         
         [HttpPut("{id}")]
+        [Authorize(Policy = PolicyTypes.Chats.Edit)]
         public IActionResult UpdateChat(int id, ChatForManipulationDto chatDto)
         {
             var chatFromDb = _repository.Chat.GetChat(id, false);

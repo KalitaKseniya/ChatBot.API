@@ -5,6 +5,8 @@ using ChatBot.Infrastructure.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ChatBot.API.Controllers
@@ -23,6 +25,7 @@ namespace ChatBot.API.Controllers
         }
 
         [HttpGet]
+        [Authorize(Policy = PolicyTypes.Users.View)]
         public IActionResult GetUsers()
         {
             var users = _userManager.Users;
@@ -31,6 +34,7 @@ namespace ChatBot.API.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(Policy = PolicyTypes.Users.View)]
         public async Task<IActionResult> GetUserById(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
@@ -43,8 +47,8 @@ namespace ChatBot.API.Controllers
             return Ok(user);
         }
 
-        [Authorize(Policy = PolicyTypes.Users.Manage)]
         [HttpPost]
+        [Authorize(Policy = PolicyTypes.Users.AddRemove)]
         public async Task<IActionResult> CreateUser(UserForCreationDto userDto)
         {
             if (userDto == null)
@@ -76,6 +80,7 @@ namespace ChatBot.API.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Policy = PolicyTypes.Users.Edit)]
         public async Task<IActionResult> UpdateUser(string id, UserForUpdateDto userDto)
         {
             var user = await _userManager.FindByIdAsync(id);
@@ -93,6 +98,7 @@ namespace ChatBot.API.Controllers
         }
 
         [HttpPut("{id}/password-change")]
+        [Authorize(Policy = PolicyTypes.Users.ChangePassword)]
         public async Task<IActionResult> ChangeUsersPassword(string id, PasswordChangeDto passwordsDto)
         {
             var user = await _userManager.FindByIdAsync(id);
@@ -111,6 +117,7 @@ namespace ChatBot.API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Policy = PolicyTypes.Users.AddRemove)]
         public async Task<IActionResult> DeleteUser(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
@@ -126,6 +133,7 @@ namespace ChatBot.API.Controllers
         }
 
         [HttpGet("{id}/roles")]
+        [Authorize(Policy = PolicyTypes.Users.AddRemove)]
         public async Task<IActionResult> GetRolesForUser(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
@@ -136,6 +144,25 @@ namespace ChatBot.API.Controllers
             }
             var userRoles = await _userManager.GetRolesAsync(user);
             return Ok(userRoles);
+        }
+
+        [HttpPut("{id}/roles")]
+        [Authorize(Policy = PolicyTypes.Users.EditRoles)]
+        public async Task<IActionResult> UpdateRolesForUser(string id, List<string> roles)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound("User not found");
+            }
+            var userRoles = await _userManager.GetRolesAsync(user);
+
+            var addedRoles = roles.Except(userRoles);
+            var removedRoles = userRoles.Except(roles);
+
+            await _userManager.AddToRolesAsync(user, addedRoles);
+            await _userManager.RemoveFromRolesAsync(user, removedRoles);
+            return Ok();
         }
     }
 }

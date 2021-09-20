@@ -125,11 +125,28 @@ namespace ChatBot.API.Extensions
         {
             services.AddAuthorization(options =>
             {
-                //options.AddPolicy(PolicyTypes.Chats.Manage, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Chats.Delete); });
-                options.AddPolicy(PolicyTypes.Chats.AddRemove, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Chats.Delete); });
-                //options.AddPolicy(PolicyTypes.Users.Manage, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.Add); });
-                //options.AddPolicy(PolicyTypes.Users.Manage, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.Edit); });
-                //options.AddPolicy(PolicyTypes.Users.EditRole, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.EditRole); });
+                //users
+                options.AddPolicy(PolicyTypes.Users.View, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.View); });
+                options.AddPolicy(PolicyTypes.Users.AddRemove, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.AddRemove); });
+                options.AddPolicy(PolicyTypes.Users.Edit, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.Edit); });
+                options.AddPolicy(PolicyTypes.Users.EditRoles, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.EditRoles); });
+                options.AddPolicy(PolicyTypes.Users.ViewRoles, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.ViewRoles); });
+                options.AddPolicy(PolicyTypes.Users.ChangePassword, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.ChangePassword); });
+
+                //chats
+                options.AddPolicy(PolicyTypes.Chats.AddRemove, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Chats.AddRemove); });
+                options.AddPolicy(PolicyTypes.Chats.Edit, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Chats.Edit); });
+                options.AddPolicy(PolicyTypes.Chats.ViewById, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Chats.ViewById); });
+                
+                //claims
+                options.AddPolicy(PolicyTypes.Claims.View, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Claims.View); });
+
+                //roles
+                options.AddPolicy(PolicyTypes.Roles.View, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Roles.View); });
+                options.AddPolicy(PolicyTypes.Roles.AddRemove, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Roles.AddRemove); });
+                options.AddPolicy(PolicyTypes.Roles.ViewClaims, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Roles.ViewClaims); });
+                options.AddPolicy(PolicyTypes.Roles.EditClaims, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Roles.EditClaims); });
+
             });
         }
     }
