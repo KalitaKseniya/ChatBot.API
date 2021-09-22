@@ -5,11 +5,23 @@ using ChatBot.Infrastructure.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
+
+
+//ToDo: Add migrations
+//ToDo: Add FK on AspNetRoleClaims? -> bad idea as claims can be not only permissions
+//ClaimValue = Permission.Name -> rn to ClaimValue?
+//ToDo: auto in startup
+//ToDo: Dto or stirng in FromBody get-set
+//ToDo: check if exists in claims before set/add permissions
+//Delete CutomClaimType -> specify
+//Delete policies ? bad idea
+//mb permisions in db but policies in const static class
+//toDo: UI representation?? simple page 401 Forbidden,
+//                                  users pages
+//                                  user page (with roles - roles are active links and checkboxes)
+//                                  roles page
+//                                  role page (with permissions - show all permissions, they are checkboxes)
+
 
 namespace ChatBot.API.Controllers
 {
@@ -20,13 +32,16 @@ namespace ChatBot.API.Controllers
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ILoggerManager _logger;
         private readonly UserManager<User> _userManager;
+        private readonly IRepositoryManager _repositoryManager;
         public PermissionController(RoleManager<IdentityRole> roleManager,
                               ILoggerManager logger,
-                              UserManager<User> userManager)
+                              UserManager<User> userManager, 
+                              IRepositoryManager repositoryManager)
         {
             _roleManager = roleManager;
             _logger = logger;
             _userManager = userManager;
+            _repositoryManager = repositoryManager;
         }
 
         [HttpGet("testSer")]
@@ -42,9 +57,9 @@ namespace ChatBot.API.Controllers
         [Authorize(Policy = PolicyTypes.Claims.View)]
         public IActionResult GetAllPermissions()
         {
-            var chatsPermissions = new { Permissions.Chats.AddRemove, Permissions.Chats.Edit, Permissions.Chats.ViewById };
+            var permissions = _repositoryManager.Permission.Get(false);
             
-            return Ok(chatsPermissions);
+            return Ok(permissions);
         }
     }
 }
