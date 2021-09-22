@@ -8,6 +8,7 @@ namespace ChatBot.Infrastructure.Repositories
     {
         private RepositoryContext _repositoryContext;
         private IChatRepository _chatRepository;
+        private IPermissionRepository _permissionRepository;
         public RepositoryManager(RepositoryContext repositoryContext)
         {
             _repositoryContext = repositoryContext;
@@ -21,6 +22,17 @@ namespace ChatBot.Infrastructure.Repositories
                     _chatRepository = new ChatRepository(_repositoryContext);
                 }
                 return _chatRepository;
+            }
+        }
+        public IPermissionRepository Permission
+        {
+            get
+            {
+                if (_permissionRepository == null)
+                {
+                    _permissionRepository = new PermissionRepository(_repositoryContext);
+                }
+                return _permissionRepository;
             }
         }
 
