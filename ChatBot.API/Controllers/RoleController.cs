@@ -31,21 +31,18 @@ namespace ChatBot.API.Controllers
         //[HttpPost("init")]
         //public async Task<IActionResult> InitData()
         //{
-        //    //await _roleManager.CreateAsync(new IdentityRole("Admin"));
+        //    await _roleManager.CreateAsync(new IdentityRole("Admin"));
 
-        //    await _roleManager.CreateAsync(new IdentityRole("User"));
+        //    var adminRole = await _roleManager.FindByNameAsync("Admin");
 
-        //    var userRole = await _roleManager.FindByNameAsync("User");
+        //    await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Users.AddRemove));
 
-        //    //await _roleManager.AddClaimAsync(userRole, new Claim(CustomClaimTypes.Permission, Permissions.Chats.Delete));
+        //    await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Users.EditRoles));
+        //    await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Users.ViewRoles));
+        //    await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Users.View));
+        //    await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Roles.EditClaims));
+        //    await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Roles.ViewClaims));
            
-        //    //await _roleManager.AddClaimAsync(userRole, new Claim(CustomClaimTypes.Permission, Permissions.Users.Add));
-
-        //    //var adminRole = await _roleManager.FindByNameAsync("Admin");
-
-        //    //await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Users.Add));
-
-        //    //await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Chats.));
         //    return Ok();
 
         //}
@@ -128,7 +125,7 @@ namespace ChatBot.API.Controllers
             return Ok();
         }
 
-        [HttpGet("{roleName}")]
+        [HttpGet("{roleName}/permissions")]
         [Authorize(Policy = PolicyTypes.Roles.ViewClaims)]
         public async Task<IActionResult> GetRoleClaims(string roleName)
         {
@@ -138,11 +135,11 @@ namespace ChatBot.API.Controllers
                 return NotFound();
             }
             var claims = await _roleManager.GetClaimsAsync(role).ConfigureAwait(false);
-
-            return Ok(claims);
+            var permissions = claims.Select(c => c.Value);
+            return Ok(permissions);
         }
 
-        [HttpPut("{roleName}")]
+        [HttpPut("{roleName}/permissions")]
         [Authorize(Policy = PolicyTypes.Roles.EditClaims)]
         public async Task<IActionResult> SetRoleClaims(string roleName, [FromBody] List<string> claims)
         {
@@ -164,6 +161,32 @@ namespace ChatBot.API.Controllers
             {
                 await _roleManager.RemoveClaimAsync(role, claim);
             }
+
+            return Ok();
+        }
+        
+        [HttpPost("{roleName}/permissions")]
+        [Authorize(Policy = PolicyTypes.Roles.EditClaims)]
+        public async Task<IActionResult> AddRoleClaims(string roleName, [FromBody] List<string> claims)
+        {
+            var role = await _roleManager.FindByNameAsync(roleName);
+            if (role == null)
+            {
+                return NotFound();
+            }
+
+            var roleClaims = await _roleManager.GetClaimsAsync(role);
+            var claimsToAdd = claims.Except(roleClaims.Select(r => r.Value));
+            if(claimsToAdd == null)
+            {
+                return Ok("No claims to add");
+            }
+
+            foreach (var claim in claimsToAdd)
+            {
+                await _roleManager.AddClaimAsync(role, new Claim(CustomClaimTypes.Permission, claim));
+            }
+            
 
             return Ok();
         }
