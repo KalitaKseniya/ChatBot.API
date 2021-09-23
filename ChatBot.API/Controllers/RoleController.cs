@@ -92,6 +92,17 @@ namespace ChatBot.API.Controllers
         [Authorize(Policy = PolicyTypes.Roles.AddRemove)]
         public async Task<IActionResult> CreateRole(RoleForCreationDto roleDto)
         {
+            //проверка полученных прав доступа на наличие в БД
+            var permissions = _repository.Permission.Get(false).Select(p => p.Name);
+            foreach (var perm in roleDto.Permissions)
+            {
+                if (!permissions.Contains(perm.Name))
+                {
+                    _logger.LogError($"No permission {perm} in database");
+                    return NotFound();
+                }
+            }
+
             var result = await _roleManager.CreateAsync(new IdentityRole(roleDto.Name));
             if (!result.Succeeded)
             {
@@ -101,6 +112,13 @@ namespace ChatBot.API.Controllers
                 }
                 return BadRequest(ModelState);
             }
+
+            var role = await _roleManager.FindByNameAsync(roleDto.Name);
+            foreach (var claim in roleDto.Permissions)
+            {
+                await _roleManager.AddClaimAsync(role, new Claim(CustomClaimTypes.Permission, claim.Name));
+            }
+
             return StatusCode(201);
         }
 
