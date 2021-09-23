@@ -8,8 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 
 
 //ToDo: Add migrations
-//ToDo: Add FK on AspNetRoleClaims? -> bad idea as claims can be not only permissions
-//ClaimValue = Permission.Name -> rn to ClaimValue?
 //ToDo: auto in startup
 //ToDo: Dto or stirng in FromBody get-set
 //ToDo: check if exists in claims before set/add permissions
