@@ -19,13 +19,16 @@ namespace ChatBot.API.Controllers
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ILoggerManager _logger;
         private readonly UserManager<User> _userManager;
+        private readonly IPermissionRepository _permissionRepository;
         public RoleController(RoleManager<IdentityRole> roleManager,
                               ILoggerManager logger,
-                              UserManager<User> userManager)
+                              UserManager<User> userManager,
+                              IPermissionRepository permissionRepository)
         {
             _roleManager = roleManager;
             _logger = logger;
             _userManager = userManager;
+            _permissionRepository = permissionRepository;
         }
 
         //[HttpPost("init")]
@@ -85,7 +88,6 @@ namespace ChatBot.API.Controllers
             return Ok(role);
         }
 
-
         [HttpPost]
         [Authorize(Policy = PolicyTypes.Roles.AddRemove)]
         public async Task<IActionResult> CreateRole(RoleForCreationDto roleDto)
@@ -127,7 +129,7 @@ namespace ChatBot.API.Controllers
 
         [HttpGet("{roleName}/permissions")]
         [Authorize(Policy = PolicyTypes.Roles.ViewClaims)]
-        public async Task<IActionResult> GetRoleClaims(string roleName)
+        public async Task<IActionResult> GetRolePermissions(string roleName)
         {
             var role = await _roleManager.FindByNameAsync(roleName);
             if (role == null)
@@ -135,23 +137,34 @@ namespace ChatBot.API.Controllers
                 return NotFound();
             }
             var claims = await _roleManager.GetClaimsAsync(role).ConfigureAwait(false);
-            var permissions = claims.Select(c => c.Value);
+            var permissions = claims.Where(c => c.Type == CustomClaimTypes.Permission);
             return Ok(permissions);
         }
 
         [HttpPut("{roleName}/permissions")]
         [Authorize(Policy = PolicyTypes.Roles.EditClaims)]
-        public async Task<IActionResult> SetRoleClaims(string roleName, [FromBody] List<string> claims)
+        public async Task<IActionResult> SetRolePermissions(string roleName, [FromBody] List<string> newPermissions)
         {
             var role = await _roleManager.FindByNameAsync(roleName);
             if (role == null)
             {
                 return NotFound();
             }
+            
+            //проверка полученных прав доступа на наличие в БД
+            var permissions = _permissionRepository.Get(false).Select(p => p.Name);
+            foreach(var newPermission in newPermissions)
+            {
+                if (!permissions.Contains(newPermission))
+                {
+                    _logger.LogError($"No permission {newPermission} in database");
+                    return NotFound();
+                }
+            }
 
-            var roleClaims = await _roleManager.GetClaimsAsync(role);
-            var claimsToDelete = roleClaims.Where(r => !claims.Contains(r.Value));
-            var claimsToAdd = claims.Except(roleClaims.Select(r => r.Value));
+            var roleClaims = (await _roleManager.GetClaimsAsync(role)).Where(c => c.Type == CustomClaimTypes.Permission);
+            var claimsToDelete = roleClaims.Where(r => !newPermissions.Contains(r.Value));
+            var claimsToAdd = newPermissions.Except(roleClaims.Select(r => r.Value));
 
             foreach (var claim in claimsToAdd)
             {
@@ -167,7 +180,7 @@ namespace ChatBot.API.Controllers
         
         [HttpPost("{roleName}/permissions")]
         [Authorize(Policy = PolicyTypes.Roles.EditClaims)]
-        public async Task<IActionResult> AddRoleClaims(string roleName, [FromBody] List<string> claims)
+        public async Task<IActionResult> AddRolePermissions(string roleName, [FromBody] List<string> newPermissions)
         {
             var role = await _roleManager.FindByNameAsync(roleName);
             if (role == null)
@@ -175,8 +188,19 @@ namespace ChatBot.API.Controllers
                 return NotFound();
             }
 
-            var roleClaims = await _roleManager.GetClaimsAsync(role);
-            var claimsToAdd = claims.Except(roleClaims.Select(r => r.Value));
+            //проверка полученных прав доступа на наличие в БД
+            var permissions = _permissionRepository.Get(false).Select(p => p.Name);
+            foreach (var newPermission in newPermissions)
+            {
+                if (!permissions.Contains(newPermission))
+                {
+                    _logger.LogError($"No permission {newPermission} in database");
+                    return NotFound();
+                }
+            }
+
+            var rolePermissions = (await _roleManager.GetClaimsAsync(role)).Where(c => c.Type == CustomClaimTypes.Permission);
+            var claimsToAdd = newPermissions.Except(rolePermissions.Select(r => r.Value));
             if(claimsToAdd == null)
             {
                 return Ok("No claims to add");
@@ -186,7 +210,6 @@ namespace ChatBot.API.Controllers
             {
                 await _roleManager.AddClaimAsync(role, new Claim(CustomClaimTypes.Permission, claim));
             }
-            
 
             return Ok();
         }

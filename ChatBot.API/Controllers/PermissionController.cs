@@ -7,10 +7,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 
-//ToDo: Add migrations
 //ToDo: auto in startup
 //ToDo: Dto or stirng in FromBody get-set
-//ToDo: check if exists in claims before set/add permissions
 //Delete CutomClaimType -> specify
 //Delete policies ? bad idea
 //mb permisions in db but policies in const static class
