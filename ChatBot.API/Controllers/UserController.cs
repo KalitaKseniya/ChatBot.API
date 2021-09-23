@@ -94,6 +94,13 @@ namespace ChatBot.API.Controllers
             user.UserName = userDto.UserName;
 
             await _userManager.UpdateAsync(user);
+            var userRoles = await _userManager.GetRolesAsync(user);
+
+            var addedRoles = userDto.Roles.Except(userRoles);
+            var removedRoles = userRoles.Except(userDto.Roles);
+
+            await _userManager.AddToRolesAsync(user, addedRoles);
+            await _userManager.RemoveFromRolesAsync(user, removedRoles);
             return Ok(user);
         }
 
