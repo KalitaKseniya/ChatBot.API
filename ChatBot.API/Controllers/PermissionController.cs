@@ -14,6 +14,11 @@ using Microsoft.AspNetCore.Mvc;
 //                                  roles page
 //                                  role page (with permissions - show all permissions, they are checkboxes)
 
+//todo: ЛК
+//todo: Chats
+//todo: Edit user roles
+//todo: рефакторинг
+//todo: setrole norm
 
 namespace ChatBot.API.Controllers
 {
@@ -46,7 +51,7 @@ namespace ChatBot.API.Controllers
         //}
 
         [HttpGet]
-        //[Authorize(Policy = PolicyTypes.Claims.View)]
+        [Authorize(Policy = PolicyTypes.Claims.View)]
         public IActionResult GetAllPermissions()
         {
             var permissions = _repositoryManager.Permission.Get(false);

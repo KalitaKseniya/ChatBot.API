@@ -136,14 +136,17 @@ namespace ChatBot.API.Controllers
             {
                 return NotFound();
             }
-            var claims = await _roleManager.GetClaimsAsync(role).ConfigureAwait(false);
-            var permissions = claims.Where(c => c.Type == CustomClaimTypes.Permission);
+            var rolePermissions = (await _roleManager.GetClaimsAsync(role).ConfigureAwait(false))
+                                    .Where(c => c.Type == CustomClaimTypes.Permission)
+                                    .Select(p => p.Value);
+            var permissions = _repository.Permission.Get(false).Where(p => rolePermissions.Contains(p.Name));
             return Ok(permissions);
         }
 
+        //ToDo: переписать запрос с исп linq(статья на метаните) + check
         [HttpPut("{roleName}/permissions")]
         [Authorize(Policy = PolicyTypes.Roles.EditClaims)]
-        public async Task<IActionResult> SetRolePermissions(string roleName, [FromBody] List<PermissionForRoleDto> newPermissions)
+        public async Task<IActionResult> SetRolePermissions(string roleName, [FromBody] List<Permission> newPermissions)
         {
             var role = await _roleManager.FindByNameAsync(roleName);
             if (role == null)
@@ -152,27 +155,22 @@ namespace ChatBot.API.Controllers
             }
             
             //проверка полученных прав доступа на наличие в БД
-            var permissions = _repository.Permission.Get(false).Select(p => p.Name);
-            foreach(var newPermission in newPermissions)
+            //var permissions = _repository.Permission.Get(false);
+            //if(newPermissions.Any(np => !permissions.Contains(np)))
+            //{
+            //    return NotFound();
+            //}
+
+            var permissionsToAdd = newPermissions;
+            var claimsToDelete = await _roleManager.GetClaimsAsync(role);
+
+            foreach (var claim in claimsToDelete)
             {
-                if (!permissions.Contains(newPermission.Name))
-                {
-                    _logger.LogError($"No permission {newPermission} in database");
-                    return NotFound();
-                }
+                await _roleManager.RemoveClaimAsync(role, claim);
             }
-
-            var rolePermissions = (await _roleManager.GetClaimsAsync(role)).Where(c => c.Type == CustomClaimTypes.Permission);
-            var permissionsToDelete = rolePermissions.Where(rp => !newPermissions.Contains(new PermissionForRoleDto { Name = rp.Value}));//нет в newPermisions
-            var permissionsToAdd = newPermissions.Where(np => !rolePermissions.Contains(new Claim(CustomClaimTypes.Permission, np.Name)));//еще нет в rolePermisions
-
             foreach (var claim in permissionsToAdd)
             {
                 await _roleManager.AddClaimAsync(role, new Claim(CustomClaimTypes.Permission, claim.Name));
-            }
-            foreach (var claim in permissionsToDelete)
-            {
-                await _roleManager.RemoveClaimAsync(role, claim);
             }
 
             return Ok();

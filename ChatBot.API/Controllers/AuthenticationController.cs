@@ -3,6 +3,7 @@ using ChatBot.Core.Interfaces;
 using ChatBot.Infrastructure.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
 
 namespace ChatBot.API.Controllers
@@ -13,12 +14,18 @@ namespace ChatBot.API.Controllers
     {
         private readonly ILoggerManager _logger;
         private readonly IAuthenticationManager _authManager;
+        private readonly UserManager<User> _userManager;
+        private readonly IConfiguration _configuration;
         public AuthenticationController( 
                                         ILoggerManager logger,
-                                        IAuthenticationManager authenticationManager)
+                                        IAuthenticationManager authenticationManager,
+                                        IConfiguration configuration, 
+                                        UserManager<User> userManager)
         {
             _logger = logger;
             _authManager = authenticationManager;
+            _configuration = configuration;
+            _userManager = userManager;
         }
 
         /// <summary>
@@ -34,8 +41,14 @@ namespace ChatBot.API.Controllers
                 _logger.LogWarn($"Authentication of user failed. {userDto.UserName} {userDto.Password}");
                 return Unauthorized();
             }
-            var token = await _authManager.CreateToken() ;
-            return Ok(new { token = token });
+            var user = await _userManager.FindByNameAsync(userDto.UserName);
+            var response = new
+            {
+                token = await _authManager.CreateToken(),
+                minutesExpires = _configuration.GetSection("JwtSettings").GetSection("minutesExpires").Value,
+                roles = await _userManager.GetRolesAsync(user)
+            };
+            return Ok(response);
         }
     }
 }
