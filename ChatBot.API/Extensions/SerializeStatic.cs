@@ -9,25 +9,16 @@ namespace ChatBot.API.Extensions
 {
     public class SerializeStatic
     {
-        public static string SerializeSuperClass(Type static_class)
+        public static List<string> SerializeSuperClass(Type static_class)
         {
-            try
+            var subclasses = static_class.GetNestedTypes(BindingFlags.Static | BindingFlags.Public);
+            List<string> fields = new List<string>();
+            foreach(var subclass in subclasses)
             {
-                var subclasses = static_class.GetNestedTypes(BindingFlags.Static | BindingFlags.Public);
-                Dictionary<string, List<string>> pairs = new Dictionary<string, List<string>>();
-                foreach(var subclass in subclasses)
-                {
-                    string key = subclass.Name;
-                    
-                    List<string> value = SerializeClass(subclass);
-                    pairs.Add(key, value);
-                }
-                return JsonConvert.SerializeObject(pairs);
+                List<string> tmp = SerializeClass(subclass);
+                fields.AddRange(tmp);
             }
-            catch(Exception ex)
-            {
-                return null;
-            }
+            return fields;
         }
 
         public static List<string> SerializeClass(Type static_class)

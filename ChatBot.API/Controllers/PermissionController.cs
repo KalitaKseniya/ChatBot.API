@@ -8,10 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 
 
 //ToDo: auto in startup
-//ToDo: Dto or stirng in FromBody get-set
-//Delete CutomClaimType -> specify
-//Delete policies ? bad idea
-//mb permisions in db but policies in const static class
 //toDo: UI representation?? simple page 401 Forbidden,
 //                                  users pages
 //                                  user page (with roles - roles are active links and checkboxes)
@@ -40,17 +36,17 @@ namespace ChatBot.API.Controllers
             _repositoryManager = repositoryManager;
         }
 
-        [HttpGet("testSer")]
-        public IActionResult Test()
-        {
-            var perm = SerializeStatic.SerializeSuperClass(typeof(Permissions));
-            //var json = JsonConvert.SerializeObject(perm);
+        //[HttpGet("testSer")]
+        //public IActionResult Test()
+        //{
+        //    var perm = SerializeStatic.SerializeSuperClass(typeof(Permissions));
+        //    //var json = JsonConvert.SerializeObject(perm);
             
-            return Ok(perm);
-        }
+        //    return Ok(perm);
+        //}
 
         [HttpGet]
-        [Authorize(Policy = PolicyTypes.Claims.View)]
+        //[Authorize(Policy = PolicyTypes.Claims.View)]
         public IActionResult GetAllPermissions()
         {
             var permissions = _repositoryManager.Permission.Get(false);

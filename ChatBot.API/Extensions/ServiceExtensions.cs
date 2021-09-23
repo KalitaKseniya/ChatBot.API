@@ -125,6 +125,10 @@ namespace ChatBot.API.Extensions
         {
             services.AddAuthorization(options =>
             {
+                //to automate?
+                //var permissions = SerializeStatic.SerializeSuperClass(typeof(Permissions));
+                //var policies = SerializeStatic.SerializeSuperClass(typeof(PolicyTypes));
+
                 //users
                 options.AddPolicy(PolicyTypes.Users.View, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.View); });
                 options.AddPolicy(PolicyTypes.Users.AddRemove, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Users.AddRemove); });
