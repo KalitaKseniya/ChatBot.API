@@ -1,5 +1,4 @@
-﻿using ChatBot.API.Extensions;
-using ChatBot.Core.Interfaces;
+﻿using ChatBot.Core.Interfaces;
 using ChatBot.Core.Models;
 using ChatBot.Infrastructure.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -26,36 +25,18 @@ namespace ChatBot.API.Controllers
     [Route("api/admin/permissions")]
     public class PermissionController : Controller
     {
-        private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly ILoggerManager _logger;
-        private readonly UserManager<User> _userManager;
-        private readonly IRepositoryManager _repositoryManager;
-        public PermissionController(RoleManager<IdentityRole> roleManager,
-                              ILoggerManager logger,
-                              UserManager<User> userManager, 
-                              IRepositoryManager repositoryManager)
+         private readonly IRepositoryManager _repositoryManager;
+        public PermissionController(IRepositoryManager repositoryManager)
         {
-            _roleManager = roleManager;
-            _logger = logger;
-            _userManager = userManager;
-            _repositoryManager = repositoryManager;
+                _repositoryManager = repositoryManager;
         }
-
-        //[HttpGet("testSer")]
-        //public IActionResult Test()
-        //{
-        //    var perm = SerializeStatic.SerializeSuperClass(typeof(Permissions));
-        //    //var json = JsonConvert.SerializeObject(perm);
-            
-        //    return Ok(perm);
-        //}
 
         [HttpGet]
         [Authorize(Policy = PolicyTypes.Claims.View)]
         public IActionResult GetAllPermissions()
         {
             var permissions = _repositoryManager.Permission.Get(false);
-            
+
             return Ok(permissions);
         }
     }

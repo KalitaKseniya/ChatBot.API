@@ -1,9 +1,6 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
 namespace ChatBot.API.Extensions
 {
@@ -13,7 +10,7 @@ namespace ChatBot.API.Extensions
         {
             var subclasses = static_class.GetNestedTypes(BindingFlags.Static | BindingFlags.Public);
             List<string> fields = new List<string>();
-            foreach(var subclass in subclasses)
+            foreach (var subclass in subclasses)
             {
                 List<string> tmp = SerializeClass(subclass);
                 fields.AddRange(tmp);

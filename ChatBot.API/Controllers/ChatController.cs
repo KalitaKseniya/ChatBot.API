@@ -31,7 +31,7 @@ namespace ChatBot.API.Controllers
         public IActionResult GetChatById(int id)
         {
             var chat = _repository.Chat.GetChat(id, false);
-            if(chat == null)
+            if (chat == null)
             {
                 _logger.LogWarn($"There is no chat with id = {id}");
                 return NotFound();
@@ -44,37 +44,39 @@ namespace ChatBot.API.Controllers
         [Authorize(Policy = PolicyTypes.Chats.AddRemove)]
         public IActionResult CreateChat(ChatForManipulationDto chatDto)
         {
-            if(chatDto == null)
+            if (chatDto == null)
             {
                 _logger.LogWarn("Can't create chatDto == null");
                 return BadRequest();
             }
-            var chat = new Chat() { 
-                UserRequest =  chatDto.UserRequest,
+            var chat = new Chat()
+            {
+                UserRequest = chatDto.UserRequest,
                 BotResponse = chatDto.BotResponse,
                 NextIds = chatDto.NextIds
             };
-           
+
             _repository.Chat.CreateChat(chat);
             _repository.Save();
 
-            return Ok(new { id = chat.Id});
+            return Ok(new { id = chat.Id });
         }
-        
+
         [HttpPut("{id}")]
         [Authorize(Policy = PolicyTypes.Chats.Edit)]
         public IActionResult UpdateChat(int id, ChatForManipulationDto chatDto)
         {
             var chatFromDb = _repository.Chat.GetChat(id, false);
-            if(chatFromDb == null || chatDto == null)
+            if (chatFromDb == null || chatDto == null)
             {
                 _logger.LogWarn($"Can't update chatDto == null or no chat with id={id}");
                 return BadRequest();
             }
-            
-            var chat = new Chat() { 
+
+            var chat = new Chat()
+            {
                 Id = id,
-                UserRequest =  chatDto.UserRequest,
+                UserRequest = chatDto.UserRequest,
                 BotResponse = chatDto.BotResponse,
                 NextIds = chatDto.NextIds
             };
@@ -83,7 +85,7 @@ namespace ChatBot.API.Controllers
 
             return Ok(chat);
         }
-        [Authorize(Policy = PolicyTypes.Chats.AddRemove )]
+        [Authorize(Policy = PolicyTypes.Chats.AddRemove)]
         [HttpDelete("{id}")]
         public IActionResult DeleteChat(int id)
         {
@@ -93,7 +95,7 @@ namespace ChatBot.API.Controllers
                 _logger.LogWarn($"There is no chat with id={id}");
                 return BadRequest();
             }
-          
+
             _repository.Chat.DeleteChat(chatFromDb);
             _repository.Save();
 

@@ -1,6 +1,5 @@
 ﻿
 using ChatBot.Core.Interfaces;
-using ChatBot.Core.Models;
 
 namespace ChatBot.Infrastructure.Repositories
 {

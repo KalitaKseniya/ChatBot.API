@@ -1,7 +1,6 @@
 ﻿using ChatBot.Core.Dtos;
 using ChatBot.Core.Interfaces;
 using ChatBot.Core.Models;
-using ChatBot.Infrastructure.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -18,37 +17,15 @@ namespace ChatBot.API.Controllers
     {
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ILoggerManager _logger;
-        private readonly UserManager<User> _userManager;
         private readonly IRepositoryManager _repository;
         public RoleController(RoleManager<IdentityRole> roleManager,
                               ILoggerManager logger,
-                              UserManager<User> userManager,
                               IRepositoryManager repositoryManager)
         {
             _roleManager = roleManager;
             _logger = logger;
-            _userManager = userManager;
             _repository = repositoryManager;
         }
-
-        //[HttpPost("init")]
-        //public async Task<IActionResult> InitData()
-        //{
-        //    await _roleManager.CreateAsync(new IdentityRole("Admin"));
-
-        //    var adminRole = await _roleManager.FindByNameAsync("Admin");
-
-        //    await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Users.AddRemove));
-
-        //    await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Users.EditRoles));
-        //    await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Users.ViewRoles));
-        //    await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Users.View));
-        //    await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Roles.EditClaims));
-        //    await _roleManager.AddClaimAsync(adminRole, new Claim(CustomClaimTypes.Permission, Permissions.Roles.ViewClaims));
-           
-        //    return Ok();
-
-        //}
 
         [HttpGet]
         [Authorize(Policy = PolicyTypes.Roles.View)]
@@ -60,7 +37,7 @@ namespace ChatBot.API.Controllers
 
 
         [HttpGet("{roleId}")]
-        [Authorize(Policy = PolicyTypes.Roles.View)]//??
+        [Authorize(Policy = PolicyTypes.Roles.View)]
         public async Task<IActionResult> GetRoleById(string roleId)
         {
             var role = await _roleManager.FindByIdAsync(roleId);
@@ -135,7 +112,7 @@ namespace ChatBot.API.Controllers
             var result = await _roleManager.DeleteAsync(role);
             if (!result.Succeeded)
             {
-                foreach(var error in result.Errors)
+                foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(error.Code, error.Description);
                 }
@@ -171,7 +148,7 @@ namespace ChatBot.API.Controllers
             {
                 return NotFound();
             }
-            
+
             //проверка полученных прав доступа на наличие в БД
             //var permissions = _repository.Permission.Get(false);
             //if(newPermissions.Any(np => !permissions.Contains(np)))
@@ -193,7 +170,7 @@ namespace ChatBot.API.Controllers
 
             return Ok();
         }
-        
+
         [HttpPost("{roleName}/permissions")]
         [Authorize(Policy = PolicyTypes.Roles.EditClaims)]
         public async Task<IActionResult> AddRolePermissions(string roleName, [FromBody] List<PermissionForRoleDto> newPermissions)

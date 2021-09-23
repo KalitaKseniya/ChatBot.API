@@ -1,9 +1,6 @@
 ﻿using ChatBot.Core.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ChatBot.Core.Configuration
 {
@@ -72,7 +69,7 @@ namespace ChatBot.Core.Configuration
                {
                    Id = 10,
                    Name = Permissions.Roles.AddRemove,
-                   Description = "Просмотр ролей для пользователя"
+                   Description = "Добавить и удалить роль для пользователя"
                },
                new Permission
                {

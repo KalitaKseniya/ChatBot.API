@@ -1,6 +1,5 @@
 ﻿
 using ChatBot.Core.Interfaces;
-using ChatBot.Core.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;

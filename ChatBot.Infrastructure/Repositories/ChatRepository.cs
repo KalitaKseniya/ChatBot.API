@@ -18,7 +18,7 @@ namespace ChatBot.Infrastructure.Repositories
 
         public void DeleteChat(Chat chat) => Delete(chat);
 
-        public Chat GetChat(int Id, bool trackChanges) 
+        public Chat GetChat(int Id, bool trackChanges)
             => FindByCondition(ch => ch.Id == Id, trackChanges).FirstOrDefault();
 
         public void UpdateChat(Chat chat) => Update(chat);

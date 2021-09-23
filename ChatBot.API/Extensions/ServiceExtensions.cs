@@ -1,4 +1,5 @@
 ﻿using ChatBot.Core.Interfaces;
+using ChatBot.Core.Models;
 using ChatBot.Infrastructure;
 using ChatBot.Infrastructure.Models;
 using ChatBot.Infrastructure.Repositories;
@@ -7,13 +8,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Text;
 using Microsoft.OpenApi.Models;
+using System;
 using System.Collections.Generic;
-using System.Reflection;
 using System.IO;
-using ChatBot.Core.Models;
+using System.Reflection;
+using System.Text;
 
 namespace ChatBot.API.Extensions
 {
@@ -60,7 +60,7 @@ namespace ChatBot.API.Extensions
                     ValidateIssuer = true,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
-                    
+
                     ValidAudience = jwtSettings.GetSection("validAudience").Value,
                     ValidIssuer = jwtSettings.GetSection("validIssuer").Value,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey + secretKey))
@@ -78,7 +78,7 @@ namespace ChatBot.API.Extensions
                 {
                     Title = "ChatBot API",
                     Version = "v1",
-                }) ;
+                });
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 s.IncludeXmlComments(xmlPath);
@@ -109,7 +109,7 @@ namespace ChatBot.API.Extensions
                 });
             });
         }
-    
+
         public static void ConfigureCors(this IServiceCollection services)
         {
             services.AddCors(opt =>
@@ -141,7 +141,7 @@ namespace ChatBot.API.Extensions
                 options.AddPolicy(PolicyTypes.Chats.AddRemove, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Chats.AddRemove); });
                 options.AddPolicy(PolicyTypes.Chats.Edit, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Chats.Edit); });
                 options.AddPolicy(PolicyTypes.Chats.ViewById, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Chats.ViewById); });
-                
+
                 //claims
                 options.AddPolicy(PolicyTypes.Claims.View, policy => { policy.RequireClaim(CustomClaimTypes.Permission, Permissions.Claims.View); });
 

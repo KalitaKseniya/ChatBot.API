@@ -12,7 +12,7 @@ namespace ChatBot.Infrastructure.Repositories
         {
         }
 
-        public IEnumerable<Permission> Get(bool trackChanges) 
+        public IEnumerable<Permission> Get(bool trackChanges)
                                                 => FindAll(trackChanges);
 
         public Permission GetById(int id, bool trackChanges)

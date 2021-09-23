@@ -17,7 +17,7 @@ namespace ChatBot.Infrastructure
 {
     public class AuthenticationManager : IAuthenticationManager
     {
-        private  User _user;
+        private User _user;
         private readonly UserManager<User> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IConfiguration _configuration;
@@ -34,14 +34,14 @@ namespace ChatBot.Infrastructure
             var signingCredentials = GetSigniningCredentials();
             var claims = await GetClaims();
             var tokenOptions = GenerateTokenOptions(signingCredentials, claims);
-            
+
             return new JwtSecurityTokenHandler().WriteToken(tokenOptions);
         }
 
         public async Task<bool> ValidateUser(UserForAuthenticationDto userDto)
         {
             _user = await _userManager.FindByNameAsync(userDto.UserName);
-            
+
             return _user != null && await _userManager.CheckPasswordAsync(_user, userDto.Password);
         }
 
@@ -58,14 +58,14 @@ namespace ChatBot.Infrastructure
             var roles = await _userManager.GetRolesAsync(_user);
             var userRoles = roles.Select(r => new Claim(ClaimTypes.Role, r)).ToArray();
             var userClaims = await _userManager.GetClaimsAsync(_user).ConfigureAwait(false);
-            
+
             IList<Claim> roleClaims = new List<Claim>();
 
             foreach (var userRole in roles)
             {
                 var role = await _roleManager.FindByNameAsync(userRole);
                 IList<Claim> claims_ = await _roleManager.GetClaimsAsync(role).ConfigureAwait(false);
-                foreach(var claim_ in claims_)
+                foreach (var claim_ in claims_)
                 {
                     roleClaims.Add(claim_);
                 }
@@ -77,8 +77,8 @@ namespace ChatBot.Infrastructure
                 new Claim(ClaimTypes.Email, _user.Email),
                 new Claim(ClaimTypes.Name, _user.UserName)
             }.Union(userClaims).Union(roleClaims).Union(userRoles);
-            
-            
+
+
             return claims;
         }
 
