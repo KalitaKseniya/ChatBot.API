@@ -133,7 +133,7 @@ namespace ChatBot.API.Controllers
         }
 
         [HttpGet("{id}/roles")]
-        [Authorize(Policy = PolicyTypes.Users.AddRemove)]
+        [Authorize(Policy = PolicyTypes.Users.ViewRoles)]
         public async Task<IActionResult> GetRolesForUser(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
