@@ -93,7 +93,7 @@ namespace ChatBot.Infrastructure
                 audience: jwtSettings.GetSection("validAudience").Value,
                 claims: claims,
                 signingCredentials: signingCredentials,
-                expires: DateTime.Now.AddMinutes(Convert.ToInt32(jwtSettings.GetSection("expires").Value))
+                expires: DateTime.Now.AddMinutes(Convert.ToInt32(jwtSettings.GetSection("minutesExpires").Value))
             );
 
             return tokenOptions;

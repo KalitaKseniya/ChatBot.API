@@ -171,5 +171,33 @@ namespace ChatBot.API.Controllers
             await _userManager.RemoveFromRolesAsync(user, removedRoles);
             return Ok();
         }
+
+        [HttpGet("account")]
+        [Authorize()]
+        public async Task<IActionResult> GetCurrentUser()
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            if (user == null)
+            {
+                _logger.LogError($"Current User not found");
+                return NotFound();
+            }
+            return Ok(user);
+        }
+
+        [HttpGet("account/roles")]
+        [Authorize()]
+        public async Task<IActionResult> GetRolesForCurrentUser()
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            if (user == null)
+            {
+                _logger.LogError($"Current user not found");
+                return NotFound();
+            }
+            var userRoles = await _userManager.GetRolesAsync(user);
+            return Ok(userRoles);
+        }
     }
 }
